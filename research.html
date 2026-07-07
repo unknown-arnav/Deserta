@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en" style=""><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Research | Deserta Lab</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@400;500;600&amp;family=Hanken+Grotesk:wght@400;500;600&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-surface": "#1c1b1b",
+                        "secondary": "#5f5b75",
+                        "on-primary-fixed-variant": "#622599",
+                        "error": "#ba1a1a",
+                        "tertiary-fixed": "#ffdcc3",
+                        "outline": "#7d7483",
+                        "surface-dim": "#dcd9d9",
+                        "surface-container": "#f0eded",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-pure": "#FFFFFF",
+                        "on-tertiary": "#ffffff",
+                        "secondary-fixed": "#e5dffe",
+                        "background": "#fcf9f8",
+                        "primary-fixed": "#f0dbff",
+                        "on-error-container": "#93000a",
+                        "surface-container-low": "#f6f3f2",
+                        "on-primary": "#ffffff",
+                        "on-tertiary-fixed-variant": "#693c12",
+                        "tertiary-fixed-dim": "#fbb884",
+                        "primary-fixed-dim": "#ddb7ff",
+                        "on-surface-variant": "#4c4451",
+                        "on-tertiary-fixed": "#2f1500",
+                        "on-error": "#ffffff",
+                        "on-secondary": "#ffffff",
+                        "surface-variant": "#e5e2e1",
+                        "surface-bright": "#fcf9f8",
+                        "primary": "#2e0052",
+                        "on-tertiary-container": "#c98c5c",
+                        "tertiary-container": "#4f2700",
+                        "secondary-fixed-dim": "#c8c3e1",
+                        "secondary-container": "#e5dffe",
+                        "on-primary-fixed": "#2c0050",
+                        "primary-container": "#4b0082",
+                        "tertiary": "#301600",
+                        "error-container": "#ffdad6",
+                        "surface-container-high": "#eae7e7",
+                        "on-secondary-container": "#65617b",
+                        "outline-variant": "#cec3d3",
+                        "border-subtle": "#E5E5E5",
+                        "on-background": "#1c1b1b",
+                        "text-muted": "#666666",
+                        "on-primary-container": "#ba7ef4",
+                        "inverse-on-surface": "#f3f0ef",
+                        "inverse-primary": "#ddb7ff",
+                        "surface-container-highest": "#e5e2e1",
+                        "inverse-surface": "#313030",
+                        "surface-tint": "#7b41b3",
+                        "on-secondary-fixed-variant": "#47445c",
+                        "surface": "#fcf9f8",
+                        "on-secondary-fixed": "#1b192f"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0px",
+                        "lg": "0px",
+                        "xl": "0px",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "unit": "8px",
+                        "gutter": "24px",
+                        "section-gap": "160px",
+                        "margin-mobile": "24px",
+                        "margin-desktop": "64px",
+                        "container-max": "1280px"
+                    },
+                    "fontFamily": {
+                        "display-lg": ["\"Source Serif 4\""],
+                        "body-md": ["Hanken Grotesk"],
+                        "display-lg-mobile": ["\"Source Serif 4\""],
+                        "body-lg": ["Hanken Grotesk"],
+                        "caption": ["Hanken Grotesk"],
+                        "headline-md": ["\"Source Serif 4\""],
+                        "label-caps": ["JetBrains Mono"],
+                        "headline-lg": ["\"Source Serif 4\""]
+                    },
+                    "fontSize": {
+                        "display-lg": ["72px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "600"}],
+                        "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "display-lg-mobile": ["40px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                        "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "caption": ["14px", {"lineHeight": "1.4", "fontWeight": "400"}],
+                        "headline-md": ["32px", {"lineHeight": "1.3", "fontWeight": "500"}],
+                        "label-caps": ["12px", {"lineHeight": "1.0", "letterSpacing": "0.1em", "fontWeight": "500"}],
+                        "headline-lg": ["48px", {"lineHeight": "1.2", "fontWeight": "500"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            background-color: #fcf9f8;
+            color: #1c1b1b;
+            -webkit-font-smoothing: antialiased;
+        }
+        .editorial-grid {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            gap: 24px;
+        }
+        .hairline-border {
+            border: 1px solid #E5E5E5;
+        }
+        .hairline-b {
+            border-bottom: 1px solid #E5E5E5;
+        }
+        .hairline-t {
+            border-top: 1px solid #E5E5E5;
+        }
+        .hairline-l {
+            border-left: 1px solid #E5E5E5;
+        }
+        .hairline-r {
+            border-right: 1px solid #E5E5E5;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+            font-size: 1.25rem;
+        }
+        .hover-lift {
+            transition: transform 0.2s ease, border-color 0.2s ease;
+        }
+        .hover-lift:hover {
+            border-color: #2e0052;
+        }
+    </style>
+</head>
+<body class="font-body-md text-on-surface">
+<!-- Top Navigation Bar -->
+<header class="fixed top-0 left-0 w-full z-50 bg-background border-b border-border-subtle h-20">
+<div class="flex justify-between items-center w-full px-margin-desktop max-w-container-max mx-auto h-full">
+<a class="font-headline-md text-headline-md font-bold text-on-surface" href="index.html">Deserta Lab</a>
+<nav class="hidden md:flex items-center space-x-8"><a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors duration-200" href="research.html">Research</a><a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors duration-200" href="technology.html">Technology</a><a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors duration-200" href="platform.html">Platforms</a><a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors duration-200" href="#">Journal</a><a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors duration-200" href="#">Company</a><a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors duration-200" href="#">Contact</a></nav>
+<button class="px-6 py-2 bg-primary text-on-primary font-label-caps text-label-caps hover:opacity-90 transition-opacity">
+                Collaborate
+            </button>
+</div>
+</header>
+<main class="pt-40">
+<!-- Hero Section -->
+<section class="max-w-container-max mx-auto px-margin-desktop mb-section-gap px-6">
+<div class="editorial-grid">
+<div class="col-span-12 md:col-span-8">
+<span class="font-label-caps text-label-caps text-primary tracking-widest mb-6 block">01 / FOUNDATION</span>
+<h1 class="font-display-lg text-display-lg mb-8 text-3xl">Research is the foundation of every platform we build.</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">
+                        Our mission is to make deep technology practical, accessible and impactful. We bridge the gap between theoretical research and scalable engineering architectures.
+                    </p>
+</div>
+<div class="col-span-12 md:col-span-4 flex items-end justify-end">
+<div class="w-full h-px bg-border-subtle mb-4"></div>
+</div>
+</div>
+</section>
+<!-- Open Problems Section -->
+<section class="max-w-container-max mx-auto px-margin-desktop mb-section-gap">
+<div class="hairline-t pt-12 mb-16">
+<div class="flex justify-between items-center">
+<h2 class="font-headline-lg text-headline-lg">Open Problems</h2>
+<span class="font-label-caps text-label-caps text-on-surface-variant">Active Inquiries</span>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 border-l border-t border-border-subtle">
+<!-- AI Planning -->
+<div class="p-8 border-r border-b border-border-subtle hover:bg-surface-container-low transition-colors duration-300">
+<span class="font-label-caps text-label-caps text-secondary mb-4 block">Intelligence</span>
+<h3 class="font-headline-md text-headline-md mb-4 text-primary">AI Planning</h3>
+<p class="text-on-surface-variant text-body-md">Optimizing sequential decision-making in complex, stochastic environments for real-world autonomy.</p>
+</div>
+<!-- Decision Intelligence -->
+<div class="p-8 border-r border-b border-border-subtle hover:bg-surface-container-low transition-colors duration-300">
+<span class="font-label-caps text-label-caps text-secondary mb-4 block">Systems</span>
+<h3 class="font-headline-md text-headline-md mb-4 text-primary">Decision Intelligence</h3>
+<p class="text-on-surface-variant text-body-md">Frameworks for augmenting human judgment through high-fidelity data synthesis and predictive modeling.</p>
+</div>
+<!-- Knowledge Graphs -->
+<div class="p-8 border-r border-b border-border-subtle hover:bg-surface-container-low transition-colors duration-300">
+<span class="font-label-caps text-label-caps text-secondary mb-4 block">Knowledge</span>
+<h3 class="font-headline-md text-headline-md mb-4 text-primary">Knowledge Graphs</h3>
+<p class="text-on-surface-variant text-body-md">Representing complex semantic relationships to enable explainable and context-aware AI interactions.</p>
+</div>
+<!-- Human-AI Interfaces -->
+<div class="p-8 border-r border-b border-border-subtle hover:bg-surface-container-low transition-colors duration-300" style="background-color: transparent;">
+<span class="font-label-caps text-label-caps text-secondary mb-4 block">Design</span>
+<h3 class="font-headline-md text-headline-md mb-4 text-primary">Human-AI Interfaces</h3>
+<p class="text-on-surface-variant text-body-md">Creating intuitive, high-bandwidth communication channels between human intent and machine execution.</p>
+</div>
+<!-- Distributed Commerce -->
+<div class="p-8 border-r border-b border-border-subtle hover:bg-surface-container-low transition-colors duration-300">
+<span class="font-label-caps text-label-caps text-secondary mb-4 block">Economics</span>
+<h3 class="font-headline-md text-headline-md mb-4 text-primary">Distributed Commerce</h3>
+<p class="text-on-surface-variant text-body-md">Architecting decentralized protocols for resilient, trust-minimized economic exchange systems.</p>
+</div>
+<!-- Digital Public Infrastructure -->
+<div class="p-8 border-r border-b border-border-subtle hover:bg-surface-container-low transition-colors duration-300">
+<span class="font-label-caps text-label-caps text-secondary mb-4 block">Policy</span>
+<h3 class="font-headline-md text-headline-md mb-4 text-primary">Digital Public Infrastructure</h3>
+<p class="text-on-surface-variant text-body-md">Building the foundational digital blocks required for modern, inclusive, and transparent governance.</p>
+</div>
+<!-- Trust Systems -->
+<div class="p-8 border-r border-b border-border-subtle hover:bg-surface-container-low transition-colors duration-300" style="background-color: transparent;">
+<span class="font-label-caps text-label-caps text-secondary mb-4 block">Ethics</span>
+<h3 class="font-headline-md text-headline-md mb-4 text-primary">Trust Systems</h3>
+<p class="text-on-surface-variant text-body-md">Verification methods for establishing verifiable truth and safety in autonomous agent ecosystems.</p>
+</div>
+<!-- Privacy -->
+<div class="p-8 border-r border-b border-border-subtle hover:bg-surface-container-low transition-colors duration-300" style="background-color: transparent;">
+<span class="font-label-caps text-label-caps text-secondary mb-4 block">Security</span>
+<h3 class="font-headline-md text-headline-md mb-4 text-primary">Privacy</h3>
+<p class="text-on-surface-variant text-body-md">Exploring homomorphic encryption and zero-knowledge proofs to enable computation on private data.</p>
+</div>
+</div>
+</section>
+<!-- Research Outputs Section -->
+<section class="bg-surface-container-low py-section-gap">
+<div class="max-w-container-max mx-auto px-margin-desktop">
+<div class="editorial-grid mb-16">
+<div class="col-span-12 md:col-span-6">
+<span class="font-label-caps text-label-caps text-primary mb-4 block">02 / OUTPUTS</span>
+<h2 class="font-headline-lg text-headline-lg mb-4">Research Journal</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">Documenting our technical breakthroughs and theoretical explorations.</p>
+</div>
+</div>
+<div class="space-y-4">
+<!-- Paper Card 1 -->
+<div class="editorial-grid hairline-border bg-background p-8 hover-lift cursor-pointer group grid-cols-1">
+<div class="col-span-12 md:col-span-2 flex flex-col justify-between">
+<span class="font-label-caps text-label-caps text-secondary">MAR 2024</span>
+<span class="font-label-caps text-label-caps bg-secondary-container px-2 py-1 inline-block w-fit">RESEARCH PAPER</span>
+</div>
+<div class="col-span-12 md:col-span-7">
+<h3 class="font-headline-md text-headline-md group-hover:text-primary transition-colors">On the Feasibility of Distributed Decision Networks in Stochastic Environments</h3>
+<p class="mt-4 text-on-surface-variant">A formal inquiry into the convergence properties of decentralized AI planning agents operating under incomplete information states.</p>
+</div>
+<div class="col-span-12 md:col-span-3 flex justify-end items-center">
+<span class="material-symbols-outlined text-3xl text-on-surface-variant group-hover:text-primary transition-colors">arrow_right_alt</span>
+</div>
+</div>
+<!-- Paper Card 2 -->
+<div class="editorial-grid hairline-border bg-background p-8 hover-lift cursor-pointer group grid-cols-1">
+<div class="col-span-12 md:col-span-2 flex flex-col justify-between">
+<span class="font-label-caps text-label-caps text-secondary">JAN 2024</span>
+<span class="font-label-caps text-label-caps bg-secondary-container px-2 py-1 inline-block w-fit">WHITEPAPER</span>
+</div>
+<div class="col-span-12 md:col-span-7">
+<h3 class="font-headline-md text-headline-md group-hover:text-primary transition-colors">Architectural Integrity in Public Digital Infrastructure</h3>
+<p class="mt-4 text-on-surface-variant">Defining the core principles for building resilient and non-extractive digital public goods for urban population scales.</p>
+</div>
+<div class="col-span-12 md:col-span-3 flex justify-end items-center">
+<span class="material-symbols-outlined text-3xl text-on-surface-variant group-hover:text-primary transition-colors">arrow_right_alt</span>
+</div>
+</div>
+<!-- Paper Card 3 -->
+<div class="editorial-grid hairline-border bg-background p-8 hover-lift cursor-pointer group grid-cols-1">
+<div class="col-span-12 md:col-span-2 flex flex-col justify-between">
+<span class="font-label-caps text-label-caps text-secondary">NOV 2023</span>
+<span class="font-label-caps text-label-caps bg-secondary-container px-2 py-1 inline-block w-fit">TECHNICAL REPORT</span>
+</div>
+<div class="col-span-12 md:col-span-7">
+<h3 class="font-headline-md text-headline-md group-hover:text-primary transition-colors">Knowledge Synthesis: From Sparse Graphs to Unified Systems</h3>
+<p class="mt-4 text-on-surface-variant">Benchmarking various embedding strategies for large-scale knowledge graph unification across disparate data schemas.</p>
+</div>
+<div class="col-span-12 md:col-span-3 flex justify-end items-center">
+<span class="material-symbols-outlined text-3xl text-on-surface-variant group-hover:text-primary transition-colors">arrow_right_alt</span>
+</div>
+</div>
+</div>
+<div class="mt-12 flex justify-center">
+<button class="border border-border-subtle px-8 py-3 font-label-caps text-label-caps hover:border-primary transition-colors">
+                        View Full Archive
+                    </button>
+</div>
+</div>
+</section>
+<!-- Collaboration Section -->
+<section class="max-w-container-max mx-auto px-margin-desktop py-section-gap">
+<div class="editorial-grid items-center grid-cols-1">
+<div class="col-span-12 md:col-span-5 mb-12 md:mb-0">
+<span class="font-label-caps text-label-caps text-primary mb-4 block">03 / NETWORK</span>
+<h2 class="font-headline-lg text-headline-lg mb-8">Collaboration &amp; Ecosystem</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-8">
+                        We don't solve problems in isolation. Deserta Lab partners with academic institutions and independent researchers to push the boundaries of what's possible.
+                    </p>
+<div class="space-y-6">
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined text-primary mt-1">school</span>
+<div>
+<h4 class="font-bold text-on-surface">University Partnerships</h4>
+<p class="text-on-surface-variant">Joint research grants and lab access for PhD candidates exploring foundational AI and systems architecture.</p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined text-primary mt-1">group</span>
+<div>
+<h4 class="font-bold text-on-surface">Research Fellows</h4>
+<p class="text-on-surface-variant">A residency program for deep-tech thinkers to work alongside our engineering teams on high-impact projects.</p>
+</div>
+</div>
+</div>
+<button class="mt-12 bg-primary text-on-primary px-10 py-4 font-label-caps text-label-caps">Apply for Fellowship</button>
+</div>
+<div class="col-span-12 md:col-span-6 md:col-start-7">
+<div class="relative aspect-square hairline-border p-12 flex items-center justify-center bg-white overflow-hidden">
+<!-- Abstract Research Diagram Replacement for Image -->
+<div class="w-full h-full border border-dashed border-border-subtle rounded-full flex items-center justify-center relative opacity-40">
+<div class="absolute w-3/4 h-3/4 border border-border-subtle rounded-full animate-[spin_20s_linear_infinite]"></div>
+<div class="absolute w-1/2 h-1/2 border border-primary rounded-full opacity-50 animate-[spin_10s_linear_infinite_reverse]"></div>
+<div class="absolute w-4 h-4 bg-primary rounded-full"></div>
+</div>
+<div class="absolute inset-0 flex items-center justify-center p-12 text-center">
+<span class="font-display-lg text-headline-md font-normal leading-tight italic">
+                                "Engineering creates capability; Platforms create long-term impact."
+                            </span>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-lowest border-t border-border-subtle">
+<div class="grid grid-cols-12 gap-gutter py-section-gap px-margin-desktop max-w-container-max mx-auto">
+<div class="col-span-12 lg:col-span-4 mb-12 lg:mb-0">
+<a class="font-headline-md text-headline-md font-bold text-primary mb-6 block" href="index.html">Deserta Lab</a>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-sm mb-8">
+                    Building technology platforms for meaningful consumer and public problem solving. Engineering-first research.
+                </p>
+<p class="font-label-caps text-label-caps text-on-surface-variant">© 2026 Deserta Lab.</p><p class="font-label-caps text-label-caps text-on-surface-variant mt-1 opacity-50">Manifested into reality by Arnav</p>
+</div>
+<div class="col-span-6 md:col-span-4 lg:col-span-2">
+<h5 class="font-label-caps text-label-caps text-on-surface font-bold mb-6">LAB</h5>
+<ul class="space-y-4">
+<li class=""><a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary underline-offset-4 hover:underline" href="research.html">Research</a></li>
+<li class=""><a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary underline-offset-4 hover:underline" href="technology.html">Technology</a></li>
+<li class=""><a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary underline-offset-4 hover:underline" href="platform.html">Platforms</a></li>
+<li class=""><a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary underline-offset-4 hover:underline" href="#">Journal</a></li>
+</ul>
+</div>
+<div class="col-span-6 md:col-span-4 lg:col-span-2">
+<h5 class="font-label-caps text-label-caps text-on-surface font-bold mb-6">COMPANY</h5>
+<ul class="space-y-4">
+<li class=""><a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary underline-offset-4 hover:underline" href="research.html">Company</a></li>
+<li class=""><a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary underline-offset-4 hover:underline" href="technology.html">Collaborate</a></li>
+<li class=""><a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary underline-offset-4 hover:underline" href="platform.html">Careers</a></li>
+<li class=""><a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary underline-offset-4 hover:underline" href="#">Contact</a></li>
+</ul>
+</div><div class="col-span-6 md:col-span-4 lg:col-span-2" style="background-color: transparent;"><h5 class="font-label-caps text-label-caps text-on-surface font-bold mb-6">ECOSYSTEM</h5><ul class="space-y-4"><li class=""><a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary underline-offset-4 hover:underline" href="research.html">LAONI</a></li><li class=""><a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary underline-offset-4 hover:underline" href="#">Founder's Match</a></li><li class=""><a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary underline-offset-4 hover:underline" href="research.html">Research</a></li><li class=""><a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary underline-offset-4 hover:underline" href="technology.html">Technology</a></li><li class=""><a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary underline-offset-4 hover:underline" href="platform.html">Platforms</a></li><li class=""><a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary underline-offset-4 hover:underline" href="#">Journal</a></li></ul></div>
+<div class="col-span-12 md:col-span-4 lg:col-span-4" style="background-color: transparent;">
+<h5 class="font-label-caps text-label-caps text-on-surface font-bold mb-6">CONNECT</h5>
+<div class="flex flex-wrap gap-4">
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary underline-offset-4 hover:underline" href="#">GitHub</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary underline-offset-4 hover:underline" href="#">LinkedIn</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary underline-offset-4 hover:underline" href="#">YouTube</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary underline-offset-4 hover:underline" href="#">X</a>
+</div>
+<div class="mt-12 p-8 hairline-border bg-background w-full">
+<p class="font-label-caps text-label-caps mb-4">NEWSLETTER</p>
+<div class="flex">
+<input class="bg-transparent border-b border-border-subtle py-2 w-full focus:outline-none focus:border-primary text-body-md transition-colors" placeholder="Email Address" type="email"/>
+<button class="ml-4 text-primary"><span class="material-symbols-outlined">arrow_forward</span></button>
+</div>
+</div>
+</div>
+</div>
+</footer>
+<script>
+        // Simple scroll interaction for header
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 20) {
+                header.classList.add('shadow-sm');
+                header.style.height = '72px';
+            } else {
+                header.classList.remove('shadow-sm');
+                header.style.height = '80px';
+            }
+        });
+
+        // Hover effects for the research grid items
+        const gridItems = document.querySelectorAll('.grid > div');
+        gridItems.forEach(item => {
+            item.addEventListener('mouseenter', () => {
+                item.style.backgroundColor = 'rgba(230, 224, 255, 0.2)';
+            });
+            item.addEventListener('mouseleave', () => {
+                item.style.backgroundColor = 'transparent';
+            });
+        });
+    </script>
+</body></html>

@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en" style=""><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Deserta Lab | Engineering-First Research</title>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@400;500;600;700&amp;family=Hanken+Grotesk:wght@400;500;600&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Tailwind Configuration -->
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-surface": "#1c1b1b",
+                    "secondary": "#5f5b75",
+                    "on-primary-fixed-variant": "#622599",
+                    "error": "#ba1a1a",
+                    "tertiary-fixed": "#ffdcc3",
+                    "outline": "#7d7483",
+                    "surface-dim": "#dcd9d9",
+                    "surface-container": "#f0eded",
+                    "surface-container-lowest": "#ffffff",
+                    "surface-pure": "#FFFFFF",
+                    "on-tertiary": "#ffffff",
+                    "secondary-fixed": "#e5dffe",
+                    "background": "#fcf9f8",
+                    "primary-fixed": "#f0dbff",
+                    "on-error-container": "#93000a",
+                    "surface-container-low": "#f6f3f2",
+                    "on-primary": "#ffffff",
+                    "on-tertiary-fixed-variant": "#693c12",
+                    "tertiary-fixed-dim": "#fbb884",
+                    "primary-fixed-dim": "#ddb7ff",
+                    "on-surface-variant": "#4c4451",
+                    "on-tertiary-fixed": "#2f1500",
+                    "on-error": "#ffffff",
+                    "on-secondary": "#ffffff",
+                    "surface-variant": "#e5e2e1",
+                    "surface-bright": "#fcf9f8",
+                    "primary": "#2e0052",
+                    "on-tertiary-container": "#c98c5c",
+                    "tertiary-container": "#4f2700",
+                    "secondary-fixed-dim": "#c8c3e1",
+                    "secondary-container": "#e5dffe",
+                    "on-primary-fixed": "#2c0050",
+                    "primary-container": "#4b0082",
+                    "tertiary": "#301600",
+                    "error-container": "#ffdad6",
+                    "surface-container-high": "#eae7e7",
+                    "on-secondary-container": "#65617b",
+                    "outline-variant": "#cec3d3",
+                    "border-subtle": "#E5E5E5",
+                    "on-background": "#1c1b1b",
+                    "text-muted": "#666666",
+                    "on-primary-container": "#ba7ef4",
+                    "inverse-on-surface": "#f3f0ef",
+                    "inverse-primary": "#ddb7ff",
+                    "surface-container-highest": "#e5e2e1",
+                    "inverse-surface": "#313030",
+                    "surface-tint": "#7b41b3",
+                    "on-secondary-fixed-variant": "#47445c",
+                    "surface": "#fcf9f8",
+                    "on-secondary-fixed": "#1b192f"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "unit": "8px",
+                    "gutter": "24px",
+                    "section-gap": "160px",
+                    "margin-mobile": "24px",
+                    "margin-desktop": "64px",
+                    "container-max": "1280px"
+            },
+            "fontFamily": {
+                    "display-lg": ["\"Source Serif 4\""],
+                    "body-md": ["Hanken Grotesk"],
+                    "display-lg-mobile": ["\"Source Serif 4\""],
+                    "body-lg": ["Hanken Grotesk"],
+                    "caption": ["Hanken Grotesk"],
+                    "headline-md": ["\"Source Serif 4\""],
+                    "label-caps": ["JetBrains Mono"],
+                    "headline-lg": ["\"Source Serif 4\""]
+            },
+            "fontSize": {
+                    "display-lg": ["72px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "600"}],
+                    "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "display-lg-mobile": ["40px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "caption": ["14px", {"lineHeight": "1.4", "fontWeight": "400"}],
+                    "headline-md": ["32px", {"lineHeight": "1.3", "fontWeight": "500"}],
+                    "label-caps": ["12px", {"lineHeight": "1.0", "letterSpacing": "0.1em", "fontWeight": "500"}],
+                    "headline-lg": ["48px", {"lineHeight": "1.2", "fontWeight": "500"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body {
+            background-color: #fcf9f8;
+            color: #1c1b1b;
+            scroll-behavior: smooth;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+        .thin-border { border: 1px solid #E5E5E5; }
+        .thin-border-b { border-bottom: 1px solid #E5E5E5; }
+        .thin-border-t { border-top: 1px solid #E5E5E5; }
+        .thin-border-l { border-left: 1px solid #E5E5E5; }
+        
+        .thesis-flow-line {
+            height: 1px;
+            background-color: #E5E5E5;
+            position: relative;
+            flex-grow: 1;
+        }
+        .thesis-flow-line::after {
+            content: '';
+            position: absolute;
+            right: 0;
+            top: -3px;
+            width: 7px;
+            height: 7px;
+            border-top: 1px solid #E5E5E5;
+            border-right: 1px solid #E5E5E5;
+            transform: rotate(45deg);
+        }
+
+        .fade-in {
+            animation: fadeIn 1.2s ease-out forwards;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body class="font-body-md overflow-x-hidden">
+<!-- Top Navigation Bar -->
+<nav class="fixed top-0 left-0 w-full z-50 bg-background/95 backdrop-blur-sm thin-border-b h-20 flex items-center">
+<div class="flex justify-between items-center w-full px-margin-desktop max-w-container-max mx-auto">
+<a class="font-headline-md text-headline-md font-bold text-on-surface tracking-tighter" href="index.html">Deserta Lab</a>
+<div class="hidden md:flex items-center space-x-10"><a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors duration-200 py-1" href="research.html">Research</a><a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors duration-200 py-1" href="technology.html">Technology</a><a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors duration-200 py-1" href="platform.html">Platforms</a><a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors duration-200 py-1" href="#">Journal</a><a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors duration-200 py-1" href="#">Company</a><a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors duration-200 py-1" href="#">Contact</a></div>
+<button class="bg-primary text-on-primary px-6 py-2.5 font-label-caps text-label-caps hover:opacity-90 transition-opacity">
+                Collaborate
+            </button>
+</div>
+</nav>
+<!-- Hero Section -->
+<header class="max-w-container-max mx-auto px-6 md:px-margin-desktop pt-32 md:pt-40 pb-24 md:pb-section-gap">
+<div class="grid grid-cols-12 gap-gutter">
+<div class="col-span-12 md:col-span-10 fade-in">
+<span class="font-label-caps text-label-caps text-primary-container mb-6 block tracking-widest uppercase">Deep Technology &amp; Research</span>
+<h1 class="font-display-lg text-display-lg-mobile md:text-display-lg text-on-surface mb-8 leading-[1.1] text-4xl">
+                    Building technology platforms that make deep technology practical for solving meaningful consumer and public problems.
+                </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-3xl mb-12">
+                    Deserta Lab researches, engineers and builds intelligent platforms that transform advanced technologies into practical solutions for real-world challenges.
+                </p>
+<div class="flex flex-wrap gap-4">
+<button class="bg-primary text-on-primary px-8 py-4 font-label-caps text-label-caps hover:bg-primary-container transition-all">
+                        Explore Research
+                    </button>
+<button class="border border-border-subtle text-on-surface px-8 py-4 font-label-caps text-label-caps hover:border-primary transition-all">
+                        Explore Platforms
+                    </button>
+<button class="text-on-surface px-8 py-4 font-label-caps text-label-caps hover:underline underline-offset-8 transition-all">
+                        Learn About Deserta Lab
+                    </button>
+</div>
+</div>
+</div>
+</header>
+<!-- Visual Anchor / Separator -->
+<div class="w-full max-w-container-max mx-auto px-6 md:px-margin-desktop mb-24 md:mb-section-gap">
+<div class="h-[1px] w-full bg-border-subtle"></div>
+</div>
+<!-- Why Deserta Lab Exists Section -->
+<section class="max-w-container-max mx-auto fade-in px-6 md:px-margin-desktop pb-24 md:pb-section-gap" style="opacity: 0;">
+<div class="grid grid-cols-12 gap-gutter items-start">
+<div class="col-span-12 md:col-span-4 sticky top-32">
+<h2 class="font-label-caps text-label-caps text-primary mb-4">PURPOSE &amp; CONTEXT</h2>
+<h3 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-surface">Why Deserta Lab Exists</h3>
+</div>
+<div class="col-span-12 md:col-span-7 md:col-start-6 space-y-12">
+<div>
+<h4 class="font-headline-md text-headline-md text-on-surface mb-4">The Fragmentation Gap</h4>
+<p class="font-body-lg text-body-lg text-on-surface-variant">
+                        Modern technology is suffering from extreme fragmentation. While research labs produce groundbreaking breakthroughs in AI and distributed systems, these innovations often remain trapped in academic silos or abstract whitepapers.
+                    </p>
+</div>
+<div class="thin-border p-10 bg-surface-container-lowest">
+<h4 class="font-headline-md text-headline-md text-on-surface mb-4">Practicality vs. Complexity</h4>
+<p class="font-body-lg text-body-lg text-on-surface-variant">
+                        The challenge isn't just building the tech; it's applying it. We bridge the gap between "what is possible" and "what is useful." Deserta Lab exists to solve the friction of implementation, turning complex computational research into stable infrastructure for the public good.
+                    </p>
+</div>
+</div>
+</div>
+</section>
+<!-- Mission Statement - High Impact Typography -->
+<section class="bg-on-surface text-surface-bright fade-in py-24 md:py-section-gap px-6 md:px-margin-desktop" style="opacity: 0;">
+<div class="px-margin-desktop max-w-container-max mx-auto text-center">
+<div class="max-w-4xl mx-auto">
+<span class="font-label-caps text-label-caps text-primary-fixed mb-8 block tracking-widest">OUR CORE MISSION</span>
+<p class="font-display-lg text-display-lg-mobile md:text-display-lg leading-tight italic">
+                    "Our mission is to make deep technology practical, accessible and impactful."
+                </p>
+</div>
+</div>
+</section>
+<!-- Company Thesis Section -->
+<section class="max-w-container-max mx-auto overflow-hidden fade-in py-24 md:py-section-gap px-6 md:px-margin-desktop" style="opacity: 0;">
+<div class="text-center mb-24">
+<h2 class="font-label-caps text-label-caps text-primary mb-4">THE DESERTA THESIS</h2>
+<h3 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg">Platforms over Products</h3>
+</div>
+<!-- SVG Thesis Diagram -->
+<div class="flex flex-col md:flex-row items-center justify-between gap-8 mb-32 relative">
+<!-- Node 1: Research -->
+<div class="flex flex-col items-center group w-64">
+<div class="w-24 h-24 rounded-full thin-border flex items-center justify-center bg-white mb-6 group-hover:border-primary transition-all duration-500">
+<span class="material-symbols-outlined text-primary text-3xl">science</span>
+</div>
+<h4 class="font-label-caps text-label-caps text-on-surface mb-2">Research</h4>
+<p class="text-center text-caption text-on-surface-variant">First principles exploration and scientific discovery.</p>
+</div>
+<div class="hidden md:block thesis-flow-line"></div>
+<div class="md:hidden h-12 w-[1px] bg-border-subtle"></div>
+<!-- Node 2: Engineering -->
+<div class="flex flex-col items-center group w-64">
+<div class="w-24 h-24 rounded-full thin-border flex items-center justify-center bg-white mb-6 group-hover:border-primary transition-all duration-500">
+<span class="material-symbols-outlined text-primary text-3xl">architecture</span>
+</div>
+<h4 class="font-label-caps text-label-caps text-on-surface mb-2">Engineering</h4>
+<p class="text-center text-caption text-on-surface-variant">Translating discoveries into robust capabilities.</p>
+</div>
+<div class="hidden md:block thesis-flow-line"></div>
+<div class="md:hidden h-12 w-[1px] bg-border-subtle"></div>
+<!-- Node 3: Platforms -->
+<div class="flex flex-col items-center group w-64">
+<div class="w-24 h-24 rounded-full bg-primary flex items-center justify-center mb-6 shadow-xl shadow-primary/10">
+<span class="material-symbols-outlined text-white text-3xl">layers</span>
+</div>
+<h4 class="font-label-caps text-label-caps text-on-surface mb-2">Platforms</h4>
+<p class="text-center text-caption text-on-surface-variant">Building infrastructure for long-term scalability.</p>
+</div>
+<div class="hidden md:block thesis-flow-line"></div>
+<div class="md:hidden h-12 w-[1px] bg-border-subtle"></div>
+<!-- Node 4: Impact -->
+<div class="flex flex-col items-center group w-64">
+<div class="w-24 h-24 rounded-full thin-border flex items-center justify-center bg-white mb-6 group-hover:border-primary transition-all duration-500">
+<span class="material-symbols-outlined text-primary text-3xl">public</span>
+</div>
+<h4 class="font-label-caps text-label-caps text-on-surface mb-2">Impact</h4>
+<p class="text-center text-caption text-on-surface-variant">Meaningful problem solving at scale.</p>
+</div>
+</div>
+<div class="grid grid-cols-12 gap-gutter">
+<div class="col-span-12 md:col-span-6 md:pr-12">
+<h4 class="font-headline-md text-headline-md text-on-surface mb-6">Engineering creates capability.</h4>
+<p class="font-body-lg text-body-lg text-on-surface-variant">
+                    We believe that engineering is the critical bridge. Without rigorous engineering, research remains theoretical. By focusing on capabilities first, we ensure our technology is resilient and ready for real-world deployment.
+                </p>
+</div>
+<div class="col-span-12 md:col-span-6 md:pl-12 thin-border-l md:border-border-subtle">
+<h4 class="font-headline-md text-headline-md text-on-surface mb-6">Platforms create impact.</h4>
+<p class="font-body-lg text-body-lg text-on-surface-variant">
+                    Unlike single-use products, platforms evolve. They allow for an ecosystem of solutions to grow on top of a stable foundation. Our thesis is that platforms are the only way to solve large-scale societal and technical challenges sustainably.
+                </p>
+</div>
+</div>
+</section>
+<!-- Research Areas Bento -->
+<section class="bg-surface-container-low fade-in py-24 md:py-section-gap px-6 md:px-margin-desktop" style="opacity: 0;">
+<div class="px-margin-desktop max-w-container-max mx-auto">
+<div class="flex justify-between items-end mb-16">
+<div>
+<h2 class="font-label-caps text-label-caps text-primary mb-4 uppercase">Current Focus</h2>
+<h3 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-surface">Research Pillars</h3>
+</div>
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors flex items-center gap-2 mb-2" href="#">
+                    View All Research <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+<div class="grid grid-cols-12 gap-gutter">
+<div class="col-span-12 md:col-span-6 bg-white p-12 thin-border flex flex-col justify-between h-[400px] hover:border-primary transition-all cursor-pointer group">
+<div>
+<span class="material-symbols-outlined text-primary-container text-4xl mb-8">psychology</span>
+<h4 class="font-headline-md text-headline-md text-on-surface mb-4">Decision Intelligence</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">Designing systems that augment human decision-making through predictive modeling and causal inference.</p>
+</div>
+<div class="font-label-caps text-label-caps text-primary opacity-0 group-hover:opacity-100 transition-opacity">Read more →</div>
+</div>
+<div class="col-span-12 md:col-span-6 bg-white p-12 thin-border flex flex-col justify-between h-[400px] hover:border-primary transition-all cursor-pointer group">
+<div>
+<span class="material-symbols-outlined text-primary-container text-4xl mb-8">hub</span>
+<h4 class="font-headline-md text-headline-md text-on-surface mb-4">Knowledge Graphs</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">Structuring vast amounts of unstructured data into actionable, interconnected conceptual frameworks.</p>
+</div>
+<div class="font-label-caps text-label-caps text-primary opacity-0 group-hover:opacity-100 transition-opacity">Read more →</div>
+</div>
+<div class="col-span-12 md:col-span-4 bg-white p-12 thin-border flex flex-col justify-between h-[400px] hover:border-primary transition-all cursor-pointer group">
+<div>
+<span class="material-symbols-outlined text-primary-container text-4xl mb-8">lan</span>
+<h4 class="font-headline-md text-headline-md text-on-surface mb-4">DPI</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">Digital Public Infrastructure for national scale resilience.</p>
+</div>
+<div class="font-label-caps text-label-caps text-primary opacity-0 group-hover:opacity-100 transition-opacity">Read more →</div>
+</div>
+<div class="col-span-12 md:col-span-8 bg-on-surface p-12 flex flex-col justify-between h-[400px] hover:bg-on-surface/95 transition-all cursor-pointer group relative overflow-hidden">
+<div class="z-10">
+<span class="material-symbols-outlined text-primary-fixed text-4xl mb-8">rocket_launch</span>
+<h4 class="font-headline-md text-headline-md text-surface-bright mb-4">LAONI Platform</h4>
+<p class="font-body-md text-body-md text-surface-variant max-w-md">Our flagship platform transforming natural language into real-world problem-solving workflows. Launching soon.</p>
+</div>
+<div class="z-10 font-label-caps text-label-caps text-primary-fixed">Coming Soon</div>
+<div class="absolute right-[-10%] bottom-[-10%] opacity-10">
+<span class="material-symbols-outlined text-[300px] text-white">deployed_code</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-surface-container-lowest thin-border-t">
+<div class="grid grid-cols-12 gap-gutter max-w-container-max mx-auto py-24 md:py-section-gap px-6 md:px-margin-desktop">
+<div class="col-span-12 md:col-span-4 mb-12 md:mb-0">
+<a class="font-headline-md text-headline-md font-bold text-primary block mb-6" href="index.html">Deserta Lab</a>
+<p class="font-headline-md text-headline-md text-on-surface mb-8 leading-tight">Engineering-first research for meaningful impact.</p>
+<p class="font-body-md text-body-md text-on-surface-variant mb-8">© 2026 Deserta Lab. All rights reserved.</p><p class="font-body-md text-body-md text-on-surface-variant mb-8 -mt-4">Manifested into reality by Arnav</p>
+<div class="flex space-x-6">
+<a class="text-on-surface-variant hover:text-primary transition-all" href="#">GitHub</a>
+<a class="text-on-surface-variant hover:text-primary transition-all" href="#">LinkedIn</a>
+<a class="text-on-surface-variant hover:text-primary transition-all" href="#">X</a>
+</div>
+</div>
+<div class="col-span-6 md:col-span-2">
+<h5 class="font-label-caps text-label-caps text-on-surface mb-8" id="footer-research-heading">RESEARCH</h5>
+<ul class="space-y-4">
+<li class=""><a class="font-body-md text-body-md text-on-surface-variant hover:text-primary hover:underline underline-offset-4 transition-all" href="#">AI Planning</a></li>
+<li class=""><a class="font-body-md text-body-md text-on-surface-variant hover:text-primary hover:underline underline-offset-4 transition-all" href="#">Decision Intelligence</a></li>
+<li class=""><a class="font-body-md text-body-md text-on-surface-variant hover:text-primary hover:underline underline-offset-4 transition-all" href="#">Knowledge Graphs</a></li>
+<li class=""><a class="font-body-md text-body-md text-on-surface-variant hover:text-primary hover:underline underline-offset-4 transition-all" href="#">Journal</a></li>
+</ul>
+</div>
+<div class="col-span-6 md:col-span-2"><h5 class="font-label-caps text-label-caps text-on-surface mb-8">PLATFORMS</h5><ul class="space-y-4"><li class=""><a class="font-body-md text-body-md text-on-surface-variant hover:text-primary hover:underline underline-offset-4 transition-all" href="platform.html">LAONI</a></li><li class=""><a class="font-body-md text-body-md text-on-surface-variant hover:text-primary hover:underline underline-offset-4 transition-all" href="#">Founder's Match</a></li><li class=""><a class="font-body-md text-body-md text-on-surface-variant hover:text-primary hover:underline underline-offset-4 transition-all" href="#">Infrastructure</a></li></ul></div>
+<div class="col-span-6 md:col-span-2">
+<h5 class="font-label-caps text-label-caps text-on-surface mb-8">COMPANY</h5>
+<ul class="space-y-4">
+<li class=""><a class="font-body-md text-body-md text-on-surface-variant hover:text-primary hover:underline underline-offset-4 transition-all" href="#">About</a></li>
+<li class=""><a class="font-body-md text-body-md text-on-surface-variant hover:text-primary hover:underline underline-offset-4 transition-all" href="#">Collaborate</a></li>
+<li class=""><a class="font-body-md text-body-md text-on-surface-variant hover:text-primary hover:underline underline-offset-4 transition-all" href="#">Careers</a></li>
+</ul>
+</div>
+<div class="col-span-6 md:col-span-2">
+<h5 class="font-label-caps text-label-caps text-on-surface mb-8">LEGAL</h5>
+<ul class="space-y-4">
+<li class=""><a class="font-body-md text-body-md text-on-surface-variant hover:text-primary hover:underline underline-offset-4 transition-all" href="#">Privacy</a></li>
+<li class=""><a class="font-body-md text-body-md text-on-surface-variant hover:text-primary hover:underline underline-offset-4 transition-all" href="#">Terms</a></li>
+</ul>
+</div>
+</div>
+</footer>
+<script>
+        // Simple scroll animation observer
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('fade-in');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('section').forEach(section => {
+            section.style.opacity = '0';
+            observer.observe(section);
+        });
+
+        // Sticky nav transition
+        window.addEventListener('scroll', () => {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 50) {
+                nav.classList.add('shadow-sm');
+            } else {
+                nav.classList.remove('shadow-sm');
+            }
+        });
+    </script>
+</body></html>
