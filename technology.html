@@ -1,406 +1,864 @@
-<!DOCTYPE html><html class="scroll-smooth" lang="en" style=""><head></head><body class="bg-background">```html
+<!doctype html>
+<html class="scroll-smooth" lang="en" style="">
+  <head></head>
+  <body class="bg-background">
+    ```html
 
-<meta charset="utf-8">
-<meta content="width=device-width, initial-scale=1.0" name="viewport">
-<title>Technology | Deserta Lab - Engineering-First Research</title>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@400;500;600;700&amp;family=Hanken+Grotesk:wght@400;500;600&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
-<!-- Tailwind Configuration -->
-<script id="tailwind-config">
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Technology | Deserta Lab - Engineering-First Research</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@400;500;600;700&amp;family=Hanken+Grotesk:wght@400;500;600&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <!-- Tailwind Configuration -->
+    <script id="tailwind-config">
       tailwind.config = {
         darkMode: "class",
         theme: {
           extend: {
-            "colors": {
-                    "on-surface": "#1c1b1b",
-                    "secondary": "#5f5b75",
-                    "on-primary-fixed-variant": "#622599",
-                    "error": "#ba1a1a",
-                    "tertiary-fixed": "#ffdcc3",
-                    "outline": "#7d7483",
-                    "surface-dim": "#dcd9d9",
-                    "surface-container": "#f0eded",
-                    "surface-container-lowest": "#ffffff",
-                    "surface-pure": "#FFFFFF",
-                    "on-tertiary": "#ffffff",
-                    "secondary-fixed": "#e5dffe",
-                    "background": "#fcf9f8",
-                    "primary-fixed": "#f0dbff",
-                    "on-error-container": "#93000a",
-                    "surface-container-low": "#f6f3f2",
-                    "on-primary": "#ffffff",
-                    "on-tertiary-fixed-variant": "#693c12",
-                    "tertiary-fixed-dim": "#fbb884",
-                    "primary-fixed-dim": "#ddb7ff",
-                    "on-surface-variant": "#4c4451",
-                    "on-tertiary-fixed": "#2f1500",
-                    "on-error": "#ffffff",
-                    "on-secondary": "#ffffff",
-                    "surface-variant": "#e5e2e1",
-                    "surface-bright": "#fcf9f8",
-                    "primary": "#2e0052",
-                    "on-tertiary-container": "#c98c5c",
-                    "tertiary-container": "#4f2700",
-                    "secondary-fixed-dim": "#c8c3e1",
-                    "secondary-container": "#e5dffe",
-                    "on-primary-fixed": "#2c0050",
-                    "primary-container": "#4b0082",
-                    "tertiary": "#301600",
-                    "error-container": "#ffdad6",
-                    "surface-container-high": "#eae7e7",
-                    "on-secondary-container": "#65617b",
-                    "outline-variant": "#cec3d3",
-                    "border-subtle": "#E5E5E5",
-                    "on-background": "#1c1b1b",
-                    "text-muted": "#666666",
-                    "on-primary-container": "#ba7ef4",
-                    "inverse-on-surface": "#f3f0ef",
-                    "inverse-primary": "#ddb7ff",
-                    "surface-container-highest": "#e5e2e1",
-                    "inverse-surface": "#313030",
-                    "surface-tint": "#7b41b3",
-                    "on-secondary-fixed-variant": "#47445c",
-                    "surface": "#fcf9f8",
-                    "on-secondary-fixed": "#1b192f"
+            colors: {
+              "on-surface": "#1c1b1b",
+              secondary: "#5f5b75",
+              "on-primary-fixed-variant": "#622599",
+              error: "#ba1a1a",
+              "tertiary-fixed": "#ffdcc3",
+              outline: "#7d7483",
+              "surface-dim": "#dcd9d9",
+              "surface-container": "#f0eded",
+              "surface-container-lowest": "#ffffff",
+              "surface-pure": "#FFFFFF",
+              "on-tertiary": "#ffffff",
+              "secondary-fixed": "#e5dffe",
+              background: "#fcf9f8",
+              "primary-fixed": "#f0dbff",
+              "on-error-container": "#93000a",
+              "surface-container-low": "#f6f3f2",
+              "on-primary": "#ffffff",
+              "on-tertiary-fixed-variant": "#693c12",
+              "tertiary-fixed-dim": "#fbb884",
+              "primary-fixed-dim": "#ddb7ff",
+              "on-surface-variant": "#4c4451",
+              "on-tertiary-fixed": "#2f1500",
+              "on-error": "#ffffff",
+              "on-secondary": "#ffffff",
+              "surface-variant": "#e5e2e1",
+              "surface-bright": "#fcf9f8",
+              primary: "#2e0052",
+              "on-tertiary-container": "#c98c5c",
+              "tertiary-container": "#4f2700",
+              "secondary-fixed-dim": "#c8c3e1",
+              "secondary-container": "#e5dffe",
+              "on-primary-fixed": "#2c0050",
+              "primary-container": "#4b0082",
+              tertiary: "#301600",
+              "error-container": "#ffdad6",
+              "surface-container-high": "#eae7e7",
+              "on-secondary-container": "#65617b",
+              "outline-variant": "#cec3d3",
+              "border-subtle": "#E5E5E5",
+              "on-background": "#1c1b1b",
+              "text-muted": "#666666",
+              "on-primary-container": "#ba7ef4",
+              "inverse-on-surface": "#f3f0ef",
+              "inverse-primary": "#ddb7ff",
+              "surface-container-highest": "#e5e2e1",
+              "inverse-surface": "#313030",
+              "surface-tint": "#7b41b3",
+              "on-secondary-fixed-variant": "#47445c",
+              surface: "#fcf9f8",
+              "on-secondary-fixed": "#1b192f",
             },
-            "borderRadius": {
-                    "DEFAULT": "0px",
-                    "lg": "0px",
-                    "xl": "0px",
-                    "full": "9999px"
+            borderRadius: {
+              DEFAULT: "0px",
+              lg: "0px",
+              xl: "0px",
+              full: "9999px",
             },
-            "spacing": {
-                    "unit": "8px",
-                    "gutter": "24px",
-                    "section-gap": "160px",
-                    "margin-mobile": "24px",
-                    "margin-desktop": "64px",
-                    "container-max": "1280px"
+            spacing: {
+              unit: "8px",
+              gutter: "24px",
+              "section-gap": "160px",
+              "margin-mobile": "24px",
+              "margin-desktop": "64px",
+              "container-max": "1280px",
             },
-            "fontFamily": {
-                    "display-lg": ["\"Source Serif 4\""],
-                    "body-md": ["Hanken Grotesk"],
-                    "display-lg-mobile": ["\"Source Serif 4\""],
-                    "body-lg": ["Hanken Grotesk"],
-                    "caption": ["Hanken Grotesk"],
-                    "headline-md": ["\"Source Serif 4\""],
-                    "label-caps": ["JetBrains Mono"],
-                    "headline-lg": ["\"Source Serif 4\""]
+            fontFamily: {
+              "display-lg": ['"Source Serif 4"'],
+              "body-md": ["Hanken Grotesk"],
+              "display-lg-mobile": ['"Source Serif 4"'],
+              "body-lg": ["Hanken Grotesk"],
+              caption: ["Hanken Grotesk"],
+              "headline-md": ['"Source Serif 4"'],
+              "label-caps": ["JetBrains Mono"],
+              "headline-lg": ['"Source Serif 4"'],
             },
-            "fontSize": {
-                    "display-lg": ["72px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "600"}],
-                    "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
-                    "display-lg-mobile": ["40px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "600"}],
-                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
-                    "caption": ["14px", {"lineHeight": "1.4", "fontWeight": "400"}],
-                    "headline-md": ["32px", {"lineHeight": "1.3", "fontWeight": "500"}],
-                    "label-caps": ["12px", {"lineHeight": "1.0", "letterSpacing": "0.1em", "fontWeight": "500"}],
-                    "headline-lg": ["48px", {"lineHeight": "1.2", "fontWeight": "500"}]
-            }
+            fontSize: {
+              "display-lg": [
+                "72px",
+                {
+                  lineHeight: "1.1",
+                  letterSpacing: "-0.02em",
+                  fontWeight: "600",
+                },
+              ],
+              "body-md": ["16px", { lineHeight: "1.6", fontWeight: "400" }],
+              "display-lg-mobile": [
+                "40px",
+                {
+                  lineHeight: "1.2",
+                  letterSpacing: "-0.01em",
+                  fontWeight: "600",
+                },
+              ],
+              "body-lg": ["18px", { lineHeight: "1.6", fontWeight: "400" }],
+              caption: ["14px", { lineHeight: "1.4", fontWeight: "400" }],
+              "headline-md": ["32px", { lineHeight: "1.3", fontWeight: "500" }],
+              "label-caps": [
+                "12px",
+                {
+                  lineHeight: "1.0",
+                  letterSpacing: "0.1em",
+                  fontWeight: "500",
+                },
+              ],
+              "headline-lg": ["48px", { lineHeight: "1.2", fontWeight: "500" }],
+            },
           },
         },
+      };
+    </script>
+    <style>
+      body {
+        background-color: #fcf9f8;
+        color: #1c1b1b;
+        font-family: "Hanken Grotesk", sans-serif;
+        -webkit-font-smoothing: antialiased;
       }
-    </script>
-<style>
-        body {
-            background-color: #fcf9f8;
-            color: #1c1b1b;
-            font-family: 'Hanken Grotesk', sans-serif;
-            -webkit-font-smoothing: antialiased;
-        }
-        .material-symbols-outlined {
-            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
-            vertical-align: middle;
-        }
-        .grid-hairline {
-            background-size: 40px 40px;
-            background-image: linear-gradient(to right, #E5E5E5 1px, transparent 1px),
-                              linear-gradient(to bottom, #E5E5E5 1px, transparent 1px);
-        }
-        /* Style adjustments for injected SVGs */
-        .footer-social-icon svg {
-            width: 24px;
-            height: 24px;
-            fill: currentColor;
-            display: block;
-        }
+      .material-symbols-outlined {
+        font-variation-settings:
+          "FILL" 0,
+          "wght" 400,
+          "GRAD" 0,
+          "opsz" 24;
+        vertical-align: middle;
+      }
+      .grid-hairline {
+        background-size: 40px 40px;
+        background-image:
+          linear-gradient(to right, #e5e5e5 1px, transparent 1px),
+          linear-gradient(to bottom, #e5e5e5 1px, transparent 1px);
+      }
+      /* Style adjustments for injected SVGs */
+      .footer-social-icon svg {
+        width: 24px;
+        height: 24px;
+        fill: currentColor;
+        display: block;
+      }
     </style>
-<!-- TopNavBar -->
-<nav class="fixed top-0 left-0 right-0 z-50 bg-background border-b border-border-subtle h-20">
-<div class="flex justify-between items-center w-full px-margin-desktop max-w-container-max mx-auto h-full">
-<a class="font-headline-md text-headline-md font-bold text-on-surface" href="index.html">Deserta Lab</a>
-<div class="hidden md:flex items-center gap-8"><a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors duration-200" href="research.html">Research</a><a class="font-label-caps text-label-caps text-primary font-bold border-b border-primary" href="technology.html">Technology</a><a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors duration-200" href="platform.html">Platforms</a><a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors duration-200" href="#">Journal</a><a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors duration-200" href="#">Company</a><a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors duration-200" href="#">Contact</a></div>
-<button class="bg-primary text-on-primary px-6 py-2 font-label-caps text-label-caps transition-all duration-300 hover:bg-primary-container">
-                Collaborate
-            </button>
-</div>
-</nav>
-<main class="pt-20">
-<!-- Hero Section -->
-<section class="px-margin-desktop max-w-container-max mx-auto pt-24 pb-section-gap border-x border-border-subtle min-h-[60vh] flex flex-col justify-end">
-<div class="max-w-4xl transition-all duration-1000 opacity-100">
-<span class="font-label-caps text-label-caps text-primary mb-6 block">Capabilities &amp; Infrastructure</span>
-<h1 class="font-display-lg text-display-lg text-on-surface mb-8">
-                    The Architecture of <br><span class="text-primary italic">Deep Intelligence.</span>
-</h1>
-<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">
-                    We build the foundational layers that enable practical applications of breakthrough technology. From distributed systems to decision intelligence, our stack is engineered for resilience and performance.
+    <!-- TopNavBar -->
+    <nav
+      class="fixed top-0 left-0 right-0 z-50 bg-background border-b border-border-subtle h-20"
+    >
+      <div
+        class="flex justify-between items-center w-full px-margin-desktop max-w-container-max mx-auto h-full"
+      >
+        <a
+          class="font-headline-md text-headline-md font-bold text-on-surface"
+          href="index.html"
+          >Deserta Lab</a
+        >
+        <div class="hidden md:flex items-center gap-8">
+          <a
+            class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors duration-200"
+            href="research.html"
+            >Research</a
+          ><a
+            class="font-label-caps text-label-caps text-primary font-bold border-b border-primary"
+            href="technology.html"
+            >Technology</a
+          ><a
+            class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors duration-200"
+            href="platform.html"
+            >Platforms</a
+          ><a
+            class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors duration-200"
+            href="#"
+            >Journal</a
+          ><a
+            class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors duration-200"
+            href="#"
+            >Company</a
+          ><a
+            class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors duration-200"
+            href="#"
+            >Contact</a
+          >
+        </div>
+        <button
+          class="bg-primary text-on-primary px-6 py-2 font-label-caps text-label-caps transition-all duration-300 hover:bg-primary-container"
+        >
+          Collaborate
+        </button>
+      </div>
+    </nav>
+    <main class="pt-20">
+      <!-- Hero Section -->
+      <section
+        class="px-margin-desktop max-w-container-max mx-auto pt-24 pb-section-gap border-x border-border-subtle min-h-[60vh] flex flex-col justify-end"
+      >
+        <div class="max-w-4xl transition-all duration-1000 opacity-100">
+          <span class="font-label-caps text-label-caps text-primary mb-6 block"
+            >Capabilities &amp; Infrastructure</span
+          >
+          <h1 class="font-display-lg text-display-lg text-on-surface mb-8">
+            The Architecture of <br /><span class="text-primary italic"
+              >Deep Intelligence.</span
+            >
+          </h1>
+          <p
+            class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl"
+          >
+            We build the foundational layers that enable practical applications
+            of breakthrough technology. From distributed systems to decision
+            intelligence, our stack is engineered for resilience and
+            performance.
+          </p>
+        </div>
+      </section>
+      <!-- Engineering Philosophy -->
+      <section
+        class="bg-surface-container-low border-y border-border-subtle py-section-gap px-margin-desktop"
+      >
+        <div
+          class="max-w-container-max mx-auto transition-all duration-1000 opacity-100"
+        >
+          <div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+            <div class="md:col-span-4">
+              <h2 class="font-headline-lg text-headline-lg text-on-surface">
+                Engineering Philosophy
+              </h2>
+              <p class="mt-4 font-body-md text-body-md text-on-surface-variant">
+                Our technical culture is defined by four core constraints that
+                guide every architectural decision.
+              </p>
+            </div>
+            <div
+              class="md:col-span-8 grid grid-cols-1 sm:grid-cols-2 gap-px bg-border-subtle border border-border-subtle gap-y-px"
+            >
+              <div
+                class="bg-background p-12 hover:bg-surface-container-lowest transition-colors px-6"
+              >
+                <span class="font-label-caps text-label-caps text-primary"
+                  >01</span
+                >
+                <h3 class="font-headline-md text-headline-md mt-4">Reliable</h3>
+                <p
+                  class="font-body-md text-body-md mt-4 text-on-surface-variant"
+                >
+                  Deterministic systems designed to fail gracefully. We
+                  prioritize stability in critical infrastructure over
+                  experimental volatility.
                 </p>
-</div>
-</section>
-<!-- Engineering Philosophy -->
-<section class="bg-surface-container-low border-y border-border-subtle py-section-gap px-margin-desktop">
-<div class="max-w-container-max mx-auto transition-all duration-1000 opacity-100">
-<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
-<div class="md:col-span-4">
-<h2 class="font-headline-lg text-headline-lg text-on-surface">Engineering Philosophy</h2>
-<p class="mt-4 font-body-md text-body-md text-on-surface-variant">Our technical culture is defined by four core constraints that guide every architectural decision.</p>
-</div>
-<div class="md:col-span-8 grid grid-cols-1 sm:grid-cols-2 gap-px bg-border-subtle border border-border-subtle gap-y-px">
-<div class="bg-background p-12 hover:bg-surface-container-lowest transition-colors px-6">
-<span class="font-label-caps text-label-caps text-primary">01</span>
-<h3 class="font-headline-md text-headline-md mt-4">Reliable</h3>
-<p class="font-body-md text-body-md mt-4 text-on-surface-variant">Deterministic systems designed to fail gracefully. We prioritize stability in critical infrastructure over experimental volatility.</p>
-</div>
-<div class="bg-background p-12 hover:bg-surface-container-lowest transition-colors px-6">
-<span class="font-label-caps text-label-caps text-primary">02</span>
-<h3 class="font-headline-md text-headline-md mt-4">Simple</h3>
-<p class="font-body-md text-body-md mt-4 text-on-surface-variant">Complexity is the enemy of maintenance. We strive for radical architectural simplicity to ensure long-term auditability.</p>
-</div>
-<div class="bg-background p-12 hover:bg-surface-container-lowest transition-colors px-6">
-<span class="font-label-caps text-label-caps text-primary">03</span>
-<h3 class="font-headline-md text-headline-md mt-4">Scalable</h3>
-<p class="font-body-md text-body-md mt-4 text-on-surface-variant">Built to handle population-scale loads without linear increases in operational overhead or latency.</p>
-</div>
-<div class="bg-background p-12 hover:bg-surface-container-lowest transition-colors px-6">
-<span class="font-label-caps text-label-caps text-primary">04</span>
-<h3 class="font-headline-md text-headline-md mt-4">Performance-first</h3>
-<p class="font-body-md text-body-md mt-4 text-on-surface-variant">Optimizing at the metal. Latency is more than a metric; it is a fundamental user experience constraint.</p>
-</div>
-</div>
-</div>
-</div>
-</section>
-<!-- Technology Capabilities Bento Grid -->
-<section class="py-section-gap px-margin-desktop max-w-container-max mx-auto">
-<div class="mb-16 transition-all duration-1000 opacity-100">
-<span class="font-label-caps text-label-caps text-primary mb-4 block">Our Stack</span>
-<h2 class="font-display-lg text-display-lg text-on-surface">Technical Domains</h2>
-</div>
-<div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6 transition-all duration-1000 opacity-100 sm:grid-cols-2">
-<!-- AI & Decision -->
-<div class="md:col-span-2 lg:col-span-2 border border-border-subtle p-10 flex flex-col justify-between h-80 hover:border-primary transition-all group">
-<span class="material-symbols-outlined text-4xl text-primary" data-icon="neurology">neurology</span>
-<div>
-<h3 class="font-headline-md text-headline-md mb-2">AI &amp; Decision Intelligence</h3>
-<p class="font-body-md text-body-md text-on-surface-variant">Advancing symbolic AI and neural networks for autonomous planning and reasoning systems.</p>
-</div>
-</div>
-<!-- Knowledge Systems -->
-<div class="border border-border-subtle p-10 flex flex-col justify-between h-80 hover:border-primary transition-all">
-<span class="material-symbols-outlined text-4xl text-primary" data-icon="account_tree">account_tree</span>
-<div>
-<h3 class="font-headline-md text-headline-md mb-2">Knowledge Systems</h3>
-<p class="font-body-md text-body-md text-on-surface-variant">Large-scale graph architectures for structured information retrieval.</p>
-</div>
-</div>
-<!-- Cloud & Infra -->
-<div class="border border-border-subtle p-10 flex flex-col justify-between h-80 hover:border-primary transition-all">
-<span class="material-symbols-outlined text-4xl text-primary" data-icon="cloud_done">cloud_done</span>
-<div>
-<h3 class="font-headline-md text-headline-md mb-2">Infrastructure</h3>
-<p class="font-body-md text-body-md text-on-surface-variant">Cloud-agnostic distributed systems and high-availability data layers.</p>
-</div>
-</div>
-<!-- Security & Identity -->
-<div class="border border-border-subtle p-10 flex flex-col justify-between h-80 hover:border-primary transition-all">
-<span class="material-symbols-outlined text-4xl text-primary" data-icon="encrypted">encrypted</span>
-<div>
-<h3 class="font-headline-md text-headline-md mb-2">Identity &amp; Security</h3>
-<p class="font-body-md text-body-md text-on-surface-variant">Zero-trust security models and decentralized identity protocols.</p>
-</div>
-</div>
-<!-- Payments -->
-<div class="border border-border-subtle p-10 flex flex-col justify-between h-80 hover:border-primary transition-all">
-<span class="material-symbols-outlined text-4xl text-primary" data-icon="payments">payments</span>
-<div>
-<h3 class="font-headline-md text-headline-md mb-2">Payments</h3>
-<p class="font-body-md text-body-md text-on-surface-variant">Atomic transaction processing for global-scale financial platforms.</p>
-</div>
-</div>
-<!-- Developer Platforms -->
-<div class="md:col-span-2 lg:col-span-2 border border-border-subtle p-10 flex flex-col justify-between h-80 hover:border-primary transition-all">
-<span class="material-symbols-outlined text-4xl text-primary" data-icon="terminal">terminal</span>
-<div>
-<h3 class="font-headline-md text-headline-md mb-2">Developer Platforms</h3>
-<p class="font-body-md text-body-md text-on-surface-variant">Building the SDKs and tools that empower engineers to build on Deserta infrastructure.</p>
-</div>
-</div>
-</div>
-<div class="mt-16 pt-8 border-t border-border-subtle flex flex-wrap gap-x-8 gap-y-4 transition-all duration-1000 opacity-100">
-<span class="font-label-caps text-label-caps text-on-surface-variant">Search</span>
-<span class="font-label-caps text-label-caps text-on-surface-variant">Recommendations</span>
-<span class="font-label-caps text-label-caps text-on-surface-variant">Planning Systems</span>
-<span class="font-label-caps text-label-caps text-on-surface-variant">Distributed Systems</span>
-<span class="font-label-caps text-label-caps text-on-surface-variant">Data Infrastructure</span>
-</div>
-</section>
-<!-- AI Philosophy -->
-<section class="py-section-gap px-margin-desktop bg-primary text-on-primary">
-<div class="max-w-container-max mx-auto grid grid-cols-1 md:grid-cols-2 gap-gutter items-center transition-all duration-1000 opacity-100 text-center md:text-left">
-<div>
-<span class="font-label-caps text-label-caps text-on-primary-container mb-6 block">Responsible Intelligence</span>
-<h2 class="font-display-lg text-display-lg-mobile md:text-display-lg mb-8 text-surface-pure">AI Philosophy</h2>
-<ul class="space-y-12">
-<li class="flex gap-6 flex-col md:flex-row">
-<span class="font-headline-md text-headline-md text-on-primary-container">01</span>
-<div>
-<h4 class="font-headline-md text-headline-md mb-2">Improve decision-making</h4>
-<p class="font-body-md text-body-md text-on-primary-container/80">Our AI doesn't replace intent; it refines the path to outcomes by processing vast decision spaces.</p>
-</div>
-</li>
-<li class="flex gap-6 flex-col md:flex-row">
-<span class="font-headline-md text-headline-md text-on-primary-container">02</span>
-<div>
-<h4 class="font-headline-md text-headline-md mb-2">Reduce complexity</h4>
-<p class="font-body-md text-body-md text-on-primary-container/80">Leveraging machine intelligence to distill complex systems into actionable, human-readable insights.</p>
-</div>
-</li>
-</ul>
-</div>
-<div class="hidden md:block border border-on-primary-container/20 p-12 aspect-square relative">
-<div class="relative z-10 flex flex-col justify-end h-full">
-<p class="font-headline-md text-headline-md italic mb-4">"Empower people through transparent agency."</p>
-<p class="font-body-md text-body-md text-on-primary-container">The goal of Deserta AI is to create tools that are as predictable and powerful as a mathematician's proof.</p>
-</div>
-</div>
-</div>
-</section>
-<!-- Open Source -->
-<section class="py-section-gap px-margin-desktop max-w-container-max mx-auto">
-<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter items-start transition-all duration-1000 opacity-100">
-<div class="md:col-span-5 text-center md:text-left">
-<h2 class="font-headline-lg text-headline-lg mb-8">Building in Public</h2>
-<p class="font-body-lg text-body-lg text-on-surface-variant mb-12">
-                        We believe progress in deep technology requires open standards. We release the underlying components of our platform as open-source libraries to foster the global research community.
-                    </p>
-<div class="flex gap-4 justify-center md:justify-start">
-<a class="border border-border-subtle px-8 py-3 font-label-caps text-label-caps hover:bg-on-surface hover:text-surface-pure transition-all" href="#">GitHub Repository</a>
-<a class="border border-border-subtle px-8 py-3 font-label-caps text-label-caps hover:border-primary hover:text-primary transition-all" href="#">Documentation</a>
-</div>
-</div>
-<div class="md:col-span-7 border border-border-subtle bg-surface-container-low divide-y divide-border-subtle">
-<div class="p-8 flex justify-between items-center group cursor-pointer hover:bg-background">
-<div>
-<h4 class="font-headline-md text-headline-md text-on-surface">L-Kernal</h4>
-<p class="font-body-md text-body-md text-on-surface-variant">Core distributed processing engine for AI planning.</p>
-</div>
-<span class="material-symbols-outlined group-hover:translate-x-2 transition-transform" data-icon="arrow_forward">arrow_forward</span>
-</div>
-<div class="p-8 flex justify-between items-center group cursor-pointer hover:bg-background">
-<div>
-<h4 class="font-headline-md text-headline-md text-on-surface">GraphState SDK</h4>
-<p class="font-body-md text-body-md text-on-surface-variant">TypeScript/Rust libraries for high-performance knowledge graphs.</p>
-</div>
-<span class="material-symbols-outlined group-hover:translate-x-2 transition-transform" data-icon="arrow_forward">arrow_forward</span>
-</div>
-<div class="p-8 flex justify-between items-center group cursor-pointer hover:bg-background">
-<div>
-<h4 class="font-headline-md text-headline-md text-on-surface">Auth-D Protocol</h4>
-<p class="font-body-md text-body-md text-on-surface-variant">Standardized identity verification for decentralized platforms.</p>
-</div>
-<span class="material-symbols-outlined group-hover:translate-x-2 transition-transform" data-icon="arrow_forward">arrow_forward</span>
-</div>
-</div>
-</div>
-</section>
-<!-- Final CTA -->
-<section class="mb-section-gap px-margin-desktop max-w-container-max mx-auto">
-<div class="bg-surface-container py-32 text-center border border-border-subtle transition-all duration-1000 opacity-100">
-<h2 class="font-headline-lg text-headline-lg mb-8">Build the future with us.</h2>
-<p class="font-body-md text-body-md text-on-surface-variant max-w-lg mx-auto mb-12">We are looking for engineers and researchers who are obsessed with building reliable, first-principles systems.</p>
-<div class="flex justify-center gap-6">
-<button class="bg-primary text-on-primary px-10 py-4 font-label-caps text-label-caps hover:bg-primary-container transition-all">View Openings</button>
-<button class="border border-border-subtle bg-surface-pure px-10 py-4 font-label-caps text-label-caps hover:border-primary transition-all">Our Process</button>
-</div>
-</div>
-</section>
-</main>
-<!-- Footer -->
-<footer class="bg-surface-container-lowest border-t border-border-subtle">
-<div class="grid grid-cols-12 gap-gutter max-w-container-max mx-auto py-24 md:py-section-gap px-6 md:px-margin-desktop">
-<div class="col-span-12 md:col-span-4 mb-12 md:mb-0">
-<a class="font-headline-md text-headline-md font-bold text-primary block mb-6" href="index.html">Deserta Lab</a>
-<p class="font-headline-md text-headline-md text-on-surface mb-8 leading-tight">Engineering-first research for meaningful impact.</p>
-<p class="font-body-md text-body-md text-on-surface-variant mb-8">© 2026 Deserta Lab. All rights reserved.</p><p class="font-body-md text-body-md text-on-surface-variant mb-8 -mt-4">Manifested into reality by Arnav</p>
-<div class="flex space-x-6">
-<a aria-label="GitHub" class="text-on-surface-variant hover:text-primary transition-all footer-social-icon" href="https://github.com/desertalab">
-<div class="w-6 h-6 flex items-center justify-center"><img src="resources/git.svg" alt="GitHub" class="w-6 h-6 object-contain"></div>
-</a>
-<a aria-label="LinkedIn" class="text-on-surface-variant hover:text-primary transition-all footer-social-icon" href="https://www.linkedin.com/in/bhajanlal-bishnoi-4950523ab/">
-<div class="w-6 h-6 flex items-center justify-center"><img src="resources/link.svg" alt="LinkedIn" class="w-6 h-6 object-contain"></div>
-</a>
-<a aria-label="Instagram" class="text-on-surface-variant hover:text-primary transition-all footer-social-icon" href="https://www.instagram.com/desertalab">
-<div class="w-6 h-6 flex items-center justify-center"><img src="resources/insta.svg" alt="Instagram" class="w-6 h-6 object-contain"></div>
-</a>
-</div>
-</div>
-<div class="col-span-6 md:col-span-2">
-<h5 class="font-label-caps text-label-caps text-on-surface mb-8" id="footer-research-heading">RESEARCH</h5>
-<ul class="space-y-4"><li class=""><a class="font-body-md text-body-md text-on-surface-variant hover:text-primary hover:underline underline-offset-4 transition-all" href="#">AI Planning</a></li><li class=""><a class="font-body-md text-body-md text-on-surface-variant hover:text-primary hover:underline underline-offset-4 transition-all" href="#">Decision Intelligence</a></li><li class=""><a class="font-body-md text-body-md text-on-surface-variant hover:text-primary hover:underline underline-offset-4 transition-all" href="#">Knowledge Graphs</a></li></ul>
-</div>
-<div class="col-span-6 md:col-span-2"><h5 class="font-label-caps text-label-caps text-on-surface mb-8">PLATFORMS</h5><ul class="space-y-4"><li class=""><a class="font-body-md text-body-md text-on-surface-variant hover:text-primary hover:underline underline-offset-4 transition-all" href="platform.html">LAONI</a></li><li class=""><a class="font-body-md text-body-md text-on-surface-variant hover:text-primary hover:underline underline-offset-4 transition-all" href="#">Founder's Match</a></li></ul></div>
-<div class="col-span-6 md:col-span-2">
-<h5 class="font-label-caps text-label-caps text-on-surface mb-8">COMPANY</h5>
-<ul class="space-y-4">
-<li class=""><a class="font-body-md text-body-md text-on-surface-variant hover:text-primary hover:underline underline-offset-4 transition-all" href="#">About</a></li>
-<li class=""><a class="font-body-md text-body-md text-on-surface-variant hover:text-primary hover:underline underline-offset-4 transition-all" href="#">Collaborate</a></li>
-<li class=""><a class="font-body-md text-body-md text-on-surface-variant hover:text-primary hover:underline underline-offset-4 transition-all" href="#">Careers</a></li>
-</ul>
-</div>
-<div class="col-span-6 md:col-span-2">
-<h5 class="font-label-caps text-label-caps text-on-surface mb-8">LEGAL</h5>
-<ul class="space-y-4">
-<li class=""><a class="font-body-md text-body-md text-on-surface-variant hover:text-primary hover:underline underline-offset-4 transition-all" href="#">Privacy</a></li>
-<li class=""><a class="font-body-md text-body-md text-on-surface-variant hover:text-primary hover:underline underline-offset-4 transition-all" href="#">Terms</a></li>
-</ul>
-</div>
-</div>
-</footer>
-<script>
-        // Subtle micro-interactions
-        document.querySelectorAll('button, a').forEach(el => {
-            el.addEventListener('mousedown', () => {
-                el.style.opacity = '0.8';
-            });
-            el.addEventListener('mouseup', () => {
-                el.style.opacity = '1';
-            });
+              </div>
+              <div
+                class="bg-background p-12 hover:bg-surface-container-lowest transition-colors px-6"
+              >
+                <span class="font-label-caps text-label-caps text-primary"
+                  >02</span
+                >
+                <h3 class="font-headline-md text-headline-md mt-4">Simple</h3>
+                <p
+                  class="font-body-md text-body-md mt-4 text-on-surface-variant"
+                >
+                  Complexity is the enemy of maintenance. We strive for radical
+                  architectural simplicity to ensure long-term auditability.
+                </p>
+              </div>
+              <div
+                class="bg-background p-12 hover:bg-surface-container-lowest transition-colors px-6"
+              >
+                <span class="font-label-caps text-label-caps text-primary"
+                  >03</span
+                >
+                <h3 class="font-headline-md text-headline-md mt-4">Scalable</h3>
+                <p
+                  class="font-body-md text-body-md mt-4 text-on-surface-variant"
+                >
+                  Built to handle population-scale loads without linear
+                  increases in operational overhead or latency.
+                </p>
+              </div>
+              <div
+                class="bg-background p-12 hover:bg-surface-container-lowest transition-colors px-6"
+              >
+                <span class="font-label-caps text-label-caps text-primary"
+                  >04</span
+                >
+                <h3 class="font-headline-md text-headline-md mt-4">
+                  Performance-first
+                </h3>
+                <p
+                  class="font-body-md text-body-md mt-4 text-on-surface-variant"
+                >
+                  Optimizing at the metal. Latency is more than a metric; it is
+                  a fundamental user experience constraint.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Technology Capabilities Bento Grid -->
+      <section
+        class="py-section-gap px-margin-desktop max-w-container-max mx-auto"
+      >
+        <div class="mb-16 transition-all duration-1000 opacity-100">
+          <span class="font-label-caps text-label-caps text-primary mb-4 block"
+            >Our Stack</span
+          >
+          <h2 class="font-display-lg text-display-lg text-on-surface">
+            Technical Domains
+          </h2>
+        </div>
+        <div
+          class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6 transition-all duration-1000 opacity-100 sm:grid-cols-2"
+        >
+          <!-- AI & Decision -->
+          <div
+            class="md:col-span-2 lg:col-span-2 border border-border-subtle p-10 flex flex-col justify-between h-80 hover:border-primary transition-all group"
+          >
+            <span
+              class="material-symbols-outlined text-4xl text-primary"
+              data-icon="neurology"
+              >neurology</span
+            >
+            <div>
+              <h3 class="font-headline-md text-headline-md mb-2">
+                AI &amp; Decision Intelligence
+              </h3>
+              <p class="font-body-md text-body-md text-on-surface-variant">
+                Advancing symbolic AI and neural networks for autonomous
+                planning and reasoning systems.
+              </p>
+            </div>
+          </div>
+          <!-- Knowledge Systems -->
+          <div
+            class="border border-border-subtle p-10 flex flex-col justify-between h-80 hover:border-primary transition-all"
+          >
+            <span
+              class="material-symbols-outlined text-4xl text-primary"
+              data-icon="account_tree"
+              >account_tree</span
+            >
+            <div>
+              <h3 class="font-headline-md text-headline-md mb-2">
+                Knowledge Systems
+              </h3>
+              <p class="font-body-md text-body-md text-on-surface-variant">
+                Large-scale graph architectures for structured information
+                retrieval.
+              </p>
+            </div>
+          </div>
+          <!-- Cloud & Infra -->
+          <div
+            class="border border-border-subtle p-10 flex flex-col justify-between h-80 hover:border-primary transition-all"
+          >
+            <span
+              class="material-symbols-outlined text-4xl text-primary"
+              data-icon="cloud_done"
+              >cloud_done</span
+            >
+            <div>
+              <h3 class="font-headline-md text-headline-md mb-2">
+                Infrastructure
+              </h3>
+              <p class="font-body-md text-body-md text-on-surface-variant">
+                Cloud-agnostic distributed systems and high-availability data
+                layers.
+              </p>
+            </div>
+          </div>
+          <!-- Security & Identity -->
+          <div
+            class="border border-border-subtle p-10 flex flex-col justify-between h-80 hover:border-primary transition-all"
+          >
+            <span
+              class="material-symbols-outlined text-4xl text-primary"
+              data-icon="encrypted"
+              >encrypted</span
+            >
+            <div>
+              <h3 class="font-headline-md text-headline-md mb-2">
+                Identity &amp; Security
+              </h3>
+              <p class="font-body-md text-body-md text-on-surface-variant">
+                Zero-trust security models and decentralized identity protocols.
+              </p>
+            </div>
+          </div>
+          <!-- Payments -->
+          <div
+            class="border border-border-subtle p-10 flex flex-col justify-between h-80 hover:border-primary transition-all"
+          >
+            <span
+              class="material-symbols-outlined text-4xl text-primary"
+              data-icon="payments"
+              >payments</span
+            >
+            <div>
+              <h3 class="font-headline-md text-headline-md mb-2">Payments</h3>
+              <p class="font-body-md text-body-md text-on-surface-variant">
+                Atomic transaction processing for global-scale financial
+                platforms.
+              </p>
+            </div>
+          </div>
+          <!-- Developer Platforms -->
+          <div
+            class="md:col-span-2 lg:col-span-2 border border-border-subtle p-10 flex flex-col justify-between h-80 hover:border-primary transition-all"
+          >
+            <span
+              class="material-symbols-outlined text-4xl text-primary"
+              data-icon="terminal"
+              >terminal</span
+            >
+            <div>
+              <h3 class="font-headline-md text-headline-md mb-2">
+                Developer Platforms
+              </h3>
+              <p class="font-body-md text-body-md text-on-surface-variant">
+                Building the SDKs and tools that empower engineers to build on
+                Deserta infrastructure.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div
+          class="mt-16 pt-8 border-t border-border-subtle flex flex-wrap gap-x-8 gap-y-4 transition-all duration-1000 opacity-100"
+        >
+          <span class="font-label-caps text-label-caps text-on-surface-variant"
+            >Search</span
+          >
+          <span class="font-label-caps text-label-caps text-on-surface-variant"
+            >Recommendations</span
+          >
+          <span class="font-label-caps text-label-caps text-on-surface-variant"
+            >Planning Systems</span
+          >
+          <span class="font-label-caps text-label-caps text-on-surface-variant"
+            >Distributed Systems</span
+          >
+          <span class="font-label-caps text-label-caps text-on-surface-variant"
+            >Data Infrastructure</span
+          >
+        </div>
+      </section>
+      <!-- AI Philosophy -->
+      <section
+        class="py-section-gap px-margin-desktop bg-primary text-on-primary"
+      >
+        <div
+          class="max-w-container-max mx-auto grid grid-cols-1 md:grid-cols-2 gap-gutter items-center transition-all duration-1000 opacity-100 text-center md:text-left"
+        >
+          <div>
+            <span
+              class="font-label-caps text-label-caps text-on-primary-container mb-6 block"
+              >Responsible Intelligence</span
+            >
+            <h2
+              class="font-display-lg text-display-lg-mobile md:text-display-lg mb-8 text-surface-pure"
+            >
+              AI Philosophy
+            </h2>
+            <ul class="space-y-12">
+              <li class="flex gap-6 flex-col md:flex-row">
+                <span
+                  class="font-headline-md text-headline-md text-on-primary-container"
+                  >01</span
+                >
+                <div>
+                  <h4 class="font-headline-md text-headline-md mb-2">
+                    Improve decision-making
+                  </h4>
+                  <p
+                    class="font-body-md text-body-md text-on-primary-container/80"
+                  >
+                    Our AI doesn't replace intent; it refines the path to
+                    outcomes by processing vast decision spaces.
+                  </p>
+                </div>
+              </li>
+              <li class="flex gap-6 flex-col md:flex-row">
+                <span
+                  class="font-headline-md text-headline-md text-on-primary-container"
+                  >02</span
+                >
+                <div>
+                  <h4 class="font-headline-md text-headline-md mb-2">
+                    Reduce complexity
+                  </h4>
+                  <p
+                    class="font-body-md text-body-md text-on-primary-container/80"
+                  >
+                    Leveraging machine intelligence to distill complex systems
+                    into actionable, human-readable insights.
+                  </p>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div
+            class="hidden md:block border border-on-primary-container/20 p-12 aspect-square relative"
+          >
+            <div class="relative z-10 flex flex-col justify-end h-full">
+              <p class="font-headline-md text-headline-md italic mb-4">
+                "Empower people through transparent agency."
+              </p>
+              <p class="font-body-md text-body-md text-on-primary-container">
+                The goal of Deserta AI is to create tools that are as
+                predictable and powerful as a mathematician's proof.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Open Source -->
+      <section
+        class="py-section-gap px-margin-desktop max-w-container-max mx-auto"
+      >
+        <div
+          class="grid grid-cols-1 md:grid-cols-12 gap-gutter items-start transition-all duration-1000 opacity-100"
+        >
+          <div class="md:col-span-5 text-center md:text-left">
+            <h2 class="font-headline-lg text-headline-lg mb-8">
+              Building in Public
+            </h2>
+            <p class="font-body-lg text-body-lg text-on-surface-variant mb-12">
+              We believe progress in deep technology requires open standards. We
+              release the underlying components of our platform as open-source
+              libraries to foster the global research community.
+            </p>
+            <div class="flex gap-4 justify-center md:justify-start">
+              <a
+                class="border border-border-subtle px-8 py-3 font-label-caps text-label-caps hover:bg-on-surface hover:text-surface-pure transition-all"
+                href="#"
+                >GitHub Repository</a
+              >
+              <a
+                class="border border-border-subtle px-8 py-3 font-label-caps text-label-caps hover:border-primary hover:text-primary transition-all"
+                href="#"
+                >Documentation</a
+              >
+            </div>
+          </div>
+          <div
+            class="md:col-span-7 border border-border-subtle bg-surface-container-low divide-y divide-border-subtle"
+          >
+            <div
+              class="p-8 flex justify-between items-center group cursor-pointer hover:bg-background"
+            >
+              <div>
+                <h4 class="font-headline-md text-headline-md text-on-surface">
+                  L-Kernal
+                </h4>
+                <p class="font-body-md text-body-md text-on-surface-variant">
+                  Core distributed processing engine for AI planning.
+                </p>
+              </div>
+              <span
+                class="material-symbols-outlined group-hover:translate-x-2 transition-transform"
+                data-icon="arrow_forward"
+                >arrow_forward</span
+              >
+            </div>
+            <div
+              class="p-8 flex justify-between items-center group cursor-pointer hover:bg-background"
+            >
+              <div>
+                <h4 class="font-headline-md text-headline-md text-on-surface">
+                  GraphState SDK
+                </h4>
+                <p class="font-body-md text-body-md text-on-surface-variant">
+                  TypeScript/Rust libraries for high-performance knowledge
+                  graphs.
+                </p>
+              </div>
+              <span
+                class="material-symbols-outlined group-hover:translate-x-2 transition-transform"
+                data-icon="arrow_forward"
+                >arrow_forward</span
+              >
+            </div>
+            <div
+              class="p-8 flex justify-between items-center group cursor-pointer hover:bg-background"
+            >
+              <div>
+                <h4 class="font-headline-md text-headline-md text-on-surface">
+                  Auth-D Protocol
+                </h4>
+                <p class="font-body-md text-body-md text-on-surface-variant">
+                  Standardized identity verification for decentralized
+                  platforms.
+                </p>
+              </div>
+              <span
+                class="material-symbols-outlined group-hover:translate-x-2 transition-transform"
+                data-icon="arrow_forward"
+                >arrow_forward</span
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Final CTA -->
+      <section
+        class="mb-section-gap px-margin-desktop max-w-container-max mx-auto"
+      >
+        <div
+          class="bg-surface-container py-32 text-center border border-border-subtle transition-all duration-1000 opacity-100"
+        >
+          <h2 class="font-headline-lg text-headline-lg mb-8">
+            Build the future with us.
+          </h2>
+          <p
+            class="font-body-md text-body-md text-on-surface-variant max-w-lg mx-auto mb-12"
+          >
+            We are looking for engineers and researchers who are obsessed with
+            building reliable, first-principles systems.
+          </p>
+          <div class="flex justify-center gap-6">
+            <button
+              class="bg-primary text-on-primary px-10 py-4 font-label-caps text-label-caps hover:bg-primary-container transition-all"
+            >
+              View Openings
+            </button>
+            <button
+              class="border border-border-subtle bg-surface-pure px-10 py-4 font-label-caps text-label-caps hover:border-primary transition-all"
+            >
+              Our Process
+            </button>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- Footer -->
+    <footer class="bg-surface-container-lowest border-t border-border-subtle">
+      <div
+        class="grid grid-cols-12 gap-gutter max-w-container-max mx-auto py-24 md:py-section-gap px-6 md:px-margin-desktop"
+      >
+        <div class="col-span-12 md:col-span-4 mb-12 md:mb-0">
+          <a
+            class="font-headline-md text-headline-md font-bold text-primary block mb-6"
+            href="index.html"
+            >Deserta Lab</a
+          >
+          <p
+            class="font-headline-md text-headline-md text-on-surface mb-8 leading-tight"
+          >
+            Engineering-first research for meaningful impact.
+          </p>
+          <p class="font-body-md text-body-md text-on-surface-variant mb-8">
+            © 2026 Deserta Lab. All rights reserved.
+          </p>
+          <p
+            class="font-body-md text-body-md text-on-surface-variant mb-8 -mt-4"
+          >
+            Manifested into reality by Arnav
+          </p>
+          <div class="flex space-x-6">
+            <a
+              aria-label="GitHub"
+              class="text-on-surface-variant hover:text-primary transition-all footer-social-icon"
+              href="https://github.com/desertalab"
+            >
+              <div class="w-6 h-6 flex items-center justify-center">
+                <img
+                  src="resources/git.svg"
+                  alt="GitHub"
+                  class="w-6 h-6 object-contain"
+                />
+              </div>
+            </a>
+            <a
+              aria-label="LinkedIn"
+              class="text-on-surface-variant hover:text-primary transition-all footer-social-icon"
+              href="https://www.linkedin.com/in/bhajanlal-bishnoi-4950523ab/"
+            >
+              <div class="w-6 h-6 flex items-center justify-center">
+                <img
+                  src="resources/link.svg"
+                  alt="LinkedIn"
+                  class="w-6 h-6 object-contain"
+                />
+              </div>
+            </a>
+            <a
+              aria-label="Instagram"
+              class="text-on-surface-variant hover:text-primary transition-all footer-social-icon"
+              href="https://www.instagram.com/desertalab"
+            >
+              <div class="w-6 h-6 flex items-center justify-center">
+                <img
+                  src="resources/insta.svg"
+                  alt="Instagram"
+                  class="w-6 h-6 object-contain"
+                />
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="col-span-6 md:col-span-2">
+          <h5
+            class="font-label-caps text-label-caps text-on-surface mb-8"
+            id="footer-research-heading"
+          >
+            RESEARCH
+          </h5>
+          <ul class="space-y-4">
+            <li class="">
+              <a
+                class="font-body-md text-body-md text-on-surface-variant hover:text-primary hover:underline underline-offset-4 transition-all"
+                href="#"
+                >AI Planning</a
+              >
+            </li>
+            <li class="">
+              <a
+                class="font-body-md text-body-md text-on-surface-variant hover:text-primary hover:underline underline-offset-4 transition-all"
+                href="#"
+                >Decision Intelligence</a
+              >
+            </li>
+            <li class="">
+              <a
+                class="font-body-md text-body-md text-on-surface-variant hover:text-primary hover:underline underline-offset-4 transition-all"
+                href="#"
+                >Knowledge Graphs</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div class="col-span-6 md:col-span-2">
+          <h5 class="font-label-caps text-label-caps text-on-surface mb-8">
+            PLATFORMS
+          </h5>
+          <ul class="space-y-4">
+            <li class="">
+              <a
+                class="font-body-md text-body-md text-on-surface-variant hover:text-primary hover:underline underline-offset-4 transition-all"
+                href="platform.html"
+                >LAONI</a
+              >
+            </li>
+            <li class="">
+              <a
+                class="font-body-md text-body-md text-on-surface-variant hover:text-primary hover:underline underline-offset-4 transition-all"
+                href="#"
+                >Founder's Match</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div class="col-span-6 md:col-span-2">
+          <h5 class="font-label-caps text-label-caps text-on-surface mb-8">
+            COMPANY
+          </h5>
+          <ul class="space-y-4">
+            <li class="">
+              <a
+                class="font-body-md text-body-md text-on-surface-variant hover:text-primary hover:underline underline-offset-4 transition-all"
+                href="#"
+                >About</a
+              >
+            </li>
+            <li class="">
+              <a
+                class="font-body-md text-body-md text-on-surface-variant hover:text-primary hover:underline underline-offset-4 transition-all"
+                href="#"
+                >Collaborate</a
+              >
+            </li>
+            <li class="">
+              <a
+                class="font-body-md text-body-md text-on-surface-variant hover:text-primary hover:underline underline-offset-4 transition-all"
+                href="#"
+                >Careers</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div class="col-span-6 md:col-span-2">
+          <h5 class="font-label-caps text-label-caps text-on-surface mb-8">
+            LEGAL
+          </h5>
+          <ul class="space-y-4">
+            <li class="">
+              <a
+                class="font-body-md text-body-md text-on-surface-variant hover:text-primary hover:underline underline-offset-4 transition-all"
+                href="#"
+                >Privacy</a
+              >
+            </li>
+            <li class="">
+              <a
+                class="font-body-md text-body-md text-on-surface-variant hover:text-primary hover:underline underline-offset-4 transition-all"
+                href="#"
+                >Terms</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+    <script>
+      // Subtle micro-interactions
+      document.querySelectorAll("button, a").forEach((el) => {
+        el.addEventListener("mousedown", () => {
+          el.style.opacity = "0.8";
         });
-
-        // Intersection observer for fade-in effects
-        const observerOptions = {
-            threshold: 0.1
-        };
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('opacity-100');
-                    entry.target.classList.remove('opacity-0', 'translate-y-4');
-                }
-            });
-        }, observerOptions);
-
-        document.querySelectorAll('section > div').forEach(section => {
-            section.classList.add('transition-all', 'duration-1000', 'opacity-0', 'translate-y-4');
-            observer.observe(section);
+        el.addEventListener("mouseup", () => {
+          el.style.opacity = "1";
         });
+      });
+
+      // Intersection observer for fade-in effects
+      const observerOptions = {
+        threshold: 0.1,
+      };
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("opacity-100");
+            entry.target.classList.remove("opacity-0", "translate-y-4");
+          }
+        });
+      }, observerOptions);
+
+      document.querySelectorAll("section > div").forEach((section) => {
+        section.classList.add(
+          "transition-all",
+          "duration-1000",
+          "opacity-0",
+          "translate-y-4",
+        );
+        observer.observe(section);
+      });
     </script>
 
-
-```
-
-</body></html>
+    ```
+  </body>
+</html>
