@@ -119,6 +119,25 @@
             grid-template-columns: repeat(12, 1fr);
             gap: 24px;
         }
+        /* Style adjustments for SVG icons in footer */
+        .footer-social-icon svg {
+            width: 24px;
+            height: 24px;
+            fill: currentColor;
+        }
+        /* Specific override for LinkedIn circle and Instagram path colors if needed to match theme */
+        .footer-social-icon:hover svg path, 
+        .footer-social-icon:hover svg circle {
+            /* Keep original colors or adjust to theme on hover */
+        }
+        /* Ensure SVGs are grayscale-ish or monochromatic to match aesthetic if desired, or keep original */
+        .footer-social-icon {
+            opacity: 0.7;
+            transition: opacity 0.2s ease;
+        }
+        .footer-social-icon:hover {
+            opacity: 1;
+        }
     </style>
 </head>
 <body class="font-body-md text-body-md antialiased overflow-x-hidden">
@@ -285,42 +304,11 @@
 </section>
 </main>
 <!-- Footer -->
-<footer class="bg-surface-container-lowest border-t border-border-subtle">
-<div class="grid grid-cols-12 gap-gutter py-section-gap px-margin-desktop max-w-container-max mx-auto">
-<div class="col-span-12 md:col-span-4 mb-12 md:mb-0">
-<a class="font-headline-md text-headline-md font-bold text-primary mb-6 block" href="index.html">Deserta Lab</a>
-<p class="font-body-md text-body-md text-on-surface-variant mb-8 max-w-xs">
-                    Engineering-first research laboratory building technology platforms for systemic impact.
-                </p>
-<span class="font-label-caps text-label-caps text-on-surface-variant">© 2026 Deserta Lab.</span><p class="font-label-caps text-label-caps text-on-surface-variant mt-4 opacity-50">Manifested into reality by Arnav</p>
-</div>
-<div class="col-span-6 md:col-span-2">
-<h4 class="font-label-caps text-label-caps text-on-surface mb-6">ECOSYSTEM</h4>
-<nav class="flex flex-col gap-4"><a class="font-body-md text-body-md text-on-surface-variant hover:text-primary hover:underline underline-offset-4 transition-all duration-300" href="https://laoni.in">LAONI</a>
-
-
-<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary hover:underline underline-offset-4 transition-all duration-300" href="#">Founder's Match</a></nav>
-</div>
-<div class="col-span-6 md:col-span-2">
-<h4 class="font-label-caps text-label-caps text-on-surface mb-6">COMPANY</h4>
-<nav class="flex flex-col gap-4">
-<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary hover:underline underline-offset-4 transition-all duration-300" href="research.html">Company</a>
-<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary hover:underline underline-offset-4 transition-all duration-300" href="technology.html">Collaborate</a>
-<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary hover:underline underline-offset-4 transition-all duration-300" href="platform.html">Careers</a>
-<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary hover:underline underline-offset-4 transition-all duration-300" href="#">Contact</a>
-</nav>
-</div>
-<div class="col-span-6 md:col-span-2 mt-8 md:mt-0">
-<h4 class="font-label-caps text-label-caps text-on-surface mb-6">NETWORK</h4>
-<nav class="flex flex-col gap-4">
-<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary hover:underline underline-offset-4 transition-all duration-300" href="research.html">GitHub</a>
-<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary hover:underline underline-offset-4 transition-all duration-300" href="technology.html">LinkedIn</a>
-<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary hover:underline underline-offset-4 transition-all duration-300" href="platform.html">YouTube</a>
-<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary hover:underline underline-offset-4 transition-all duration-300" href="#">X</a>
-</nav>
-</div>
-</div>
-</footer>
+<footer class="bg-surface-container-lowest border-t border-border-subtle"><div class="grid grid-cols-12 gap-gutter max-w-container-max mx-auto py-24 md:py-section-gap px-6 md:px-margin-desktop"><div class="col-span-12 md:col-span-4 mb-12 md:mb-0"><a class="font-headline-md text-headline-md font-bold text-primary block mb-6" href="index.html">Deserta Lab</a><p class="font-headline-md text-headline-md text-on-surface mb-8 leading-tight">Engineering-first research for meaningful impact.</p><p class="font-body-md text-body-md text-on-surface-variant mb-8">© 2026 Deserta Lab. All rights reserved.</p><p class="font-body-md text-body-md text-on-surface-variant mb-8 -mt-4">Manifested into reality by Arnav</p><div class="flex space-x-6">
+<a class="footer-social-icon text-on-surface-variant" href="https://github.com/desertalab"><img src="resources/git.svg" alt="GitHub" class="w-6 h-6 opacity-70 hover:opacity-100 transition-opacity"></a>
+<a class="footer-social-icon text-on-surface-variant" href="https://www.linkedin.com/in/bhajanlal-bishnoi-4950523ab/"><img src="resources/link.svg" alt="LinkedIn" class="w-6 h-6 opacity-70 hover:opacity-100 transition-opacity"></a>
+<a class="footer-social-icon text-on-surface-variant" href="https://www.instagram.com/desertalab"><img src="resources/insta.svg" alt="Instagram" class="w-6 h-6 opacity-70 hover:opacity-100 transition-opacity"></a>
+</div></div><div class="col-span-6 md:col-span-2"><h5 class="font-label-caps text-label-caps text-on-surface mb-8">RESEARCH</h5><ul class="space-y-4"><li class=""><a class="font-body-md text-body-md text-on-surface-variant hover:text-primary hover:underline underline-offset-4 transition-all" href="#">AI Planning</a></li><li class=""><a class="font-body-md text-body-md text-on-surface-variant hover:text-primary hover:underline underline-offset-4 transition-all" href="#">Decision Intelligence</a></li><li class=""><a class="font-body-md text-body-md text-on-surface-variant hover:text-primary hover:underline underline-offset-4 transition-all" href="#">Knowledge Graphs</a></li><li class=""><a class="font-body-md text-body-md text-on-surface-variant hover:text-primary hover:underline underline-offset-4 transition-all" href="#">Journal</a></li></ul></div><div class="col-span-6 md:col-span-2"><h5 class="font-label-caps text-label-caps text-on-surface mb-8">PLATFORMS</h5><ul class="space-y-4"><li class=""><a class="font-body-md text-body-md text-on-surface-variant hover:text-primary hover:underline underline-offset-4 transition-all" href="platform.html">LAONI</a></li><li class=""><a class="font-body-md text-body-md text-on-surface-variant hover:text-primary hover:underline underline-offset-4 transition-all" href="#">Founder's Match</a></li></ul></div><div class="col-span-6 md:col-span-2"><h5 class="font-label-caps text-label-caps text-on-surface mb-8">COMPANY</h5><ul class="space-y-4"><li class=""><a class="font-body-md text-body-md text-on-surface-variant hover:text-primary hover:underline underline-offset-4 transition-all" href="#">About</a></li><li class=""><a class="font-body-md text-body-md text-on-surface-variant hover:text-primary hover:underline underline-offset-4 transition-all" href="#">Collaborate</a></li><li class=""><a class="font-body-md text-body-md text-on-surface-variant hover:text-primary hover:underline underline-offset-4 transition-all" href="#">Careers</a></li></ul></div><div class="col-span-6 md:col-span-2"><h5 class="font-label-caps text-label-caps text-on-surface mb-8">LEGAL</h5><ul class="space-y-4"><li class=""><a class="font-body-md text-body-md text-on-surface-variant hover:text-primary hover:underline underline-offset-4 transition-all" href="#">Privacy</a></li><li class=""><a class="font-body-md text-body-md text-on-surface-variant hover:text-primary hover:underline underline-offset-4 transition-all" href="#">Terms</a></li></ul></div></div></footer>
 <script>
         // Intersection Observer for scroll animations
         const observerOptions = {

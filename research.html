@@ -1,10 +1,10 @@
-<!DOCTYPE html><html class="light" lang="en" style=""><head>
+<!DOCTYPE html><html class="light" lang="en" style=""><head></head><body class="font-body-md text-on-surface">```html
+
 <meta charset="utf-8">
 <meta content="width=device-width, initial-scale=1.0" name="viewport">
 <title>Research | Deserta Lab</title>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@400;500;600&amp;family=Hanken+Grotesk:wght@400;500;600&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
 <script id="tailwind-config">
         tailwind.config = {
@@ -137,9 +137,17 @@
         .hover-lift:hover {
             border-color: #2e0052;
         }
+        .thin-border-t { border-top: 1px solid #E5E5E5; }
+        
+        .social-icon svg {
+            width: 24px;
+            height: 24px;
+            transition: opacity 0.2s ease;
+        }
+        .social-icon-github svg { fill: #4c4451; }
+        .social-icon:hover svg { opacity: 1; }
+        .social-icon-github:hover svg { fill: #2e0052; }
     </style>
-</head>
-<body class="font-body-md text-on-surface">
 <!-- Top Navigation Bar -->
 <header class="fixed top-0 left-0 w-full z-50 bg-background border-b border-border-subtle h-20">
 <div class="flex justify-between items-center w-full px-margin-desktop max-w-container-max mx-auto h-full">
@@ -194,7 +202,7 @@
 <p class="text-on-surface-variant text-body-md">Representing complex semantic relationships to enable explainable and context-aware AI interactions.</p>
 </div>
 <!-- Human-AI Interfaces -->
-<div class="p-8 border-r border-b border-border-subtle hover:bg-surface-container-low transition-colors duration-300" style="background-color: transparent;">
+<div class="p-8 border-r border-b border-border-subtle hover:bg-surface-container-low transition-colors duration-300">
 <span class="font-label-caps text-label-caps text-secondary mb-4 block">Design</span>
 <h3 class="font-headline-md text-headline-md mb-4 text-primary">Human-AI Interfaces</h3>
 <p class="text-on-surface-variant text-body-md">Creating intuitive, high-bandwidth communication channels between human intent and machine execution.</p>
@@ -212,13 +220,13 @@
 <p class="text-on-surface-variant text-body-md">Building the foundational digital blocks required for modern, inclusive, and transparent governance.</p>
 </div>
 <!-- Trust Systems -->
-<div class="p-8 border-r border-b border-border-subtle hover:bg-surface-container-low transition-colors duration-300" style="background-color: transparent;">
+<div class="p-8 border-r border-b border-border-subtle hover:bg-surface-container-low transition-colors duration-300">
 <span class="font-label-caps text-label-caps text-secondary mb-4 block">Ethics</span>
 <h3 class="font-headline-md text-headline-md mb-4 text-primary">Trust Systems</h3>
 <p class="text-on-surface-variant text-body-md">Verification methods for establishing verifiable truth and safety in autonomous agent ecosystems.</p>
 </div>
 <!-- Privacy -->
-<div class="p-8 border-r border-b border-border-subtle hover:bg-surface-container-low transition-colors duration-300" style="background-color: transparent;">
+<div class="p-8 border-r border-b border-border-subtle hover:bg-surface-container-low transition-colors duration-300">
 <span class="font-label-caps text-label-caps text-secondary mb-4 block">Security</span>
 <h3 class="font-headline-md text-headline-md mb-4 text-primary">Privacy</h3>
 <p class="text-on-surface-variant text-body-md">Exploring homomorphic encryption and zero-knowledge proofs to enable computation on private data.</p>
@@ -315,7 +323,7 @@
 </div>
 <div class="col-span-12 md:col-span-6 md:col-start-7">
 <div class="relative aspect-square hairline-border p-12 flex items-center justify-center bg-white overflow-hidden">
-<!-- Abstract Research Diagram Replacement for Image -->
+<!-- Abstract Research Diagram -->
 <div class="w-full h-full border border-dashed border-border-subtle rounded-full flex items-center justify-center relative opacity-40">
 <div class="absolute w-3/4 h-3/4 border border-border-subtle rounded-full animate-[spin_20s_linear_infinite]"></div>
 <div class="absolute w-1/2 h-1/2 border border-primary rounded-full opacity-50 animate-[spin_10s_linear_infinite_reverse]"></div>
@@ -332,48 +340,47 @@
 </section>
 </main>
 <!-- Footer -->
-<footer class="bg-surface-container-lowest border-t border-border-subtle">
-<div class="grid grid-cols-12 gap-gutter py-section-gap px-margin-desktop max-w-container-max mx-auto">
-<div class="col-span-12 lg:col-span-4 mb-12 lg:mb-0">
-<a class="font-headline-md text-headline-md font-bold text-primary mb-6 block" href="index.html">Deserta Lab</a>
-<p class="font-body-md text-body-md text-on-surface-variant max-w-sm mb-8">
-                    Building technology platforms for meaningful consumer and public problem solving. Engineering-first research.
-                </p>
-<p class="font-label-caps text-label-caps text-on-surface-variant">© 2026 Deserta Lab.</p><p class="font-label-caps text-label-caps text-on-surface-variant mt-1 opacity-50">Manifested into reality by Arnav</p>
+<footer class="bg-surface-container-lowest thin-border-t">
+<div class="grid grid-cols-12 gap-gutter max-w-container-max mx-auto py-24 md:py-section-gap px-6 md:px-margin-desktop">
+<div class="col-span-12 md:col-span-4 mb-12 md:mb-0">
+<a class="font-headline-md text-headline-md font-bold text-primary block mb-6" href="index.html">Deserta Lab</a>
+<p class="font-headline-md text-headline-md text-on-surface mb-8 leading-tight">Engineering-first research for meaningful impact.</p>
+<p class="font-body-md text-body-md text-on-surface-variant mb-8">© 2026 Deserta Lab. All rights reserved.</p><p class="font-body-md text-body-md text-on-surface-variant mb-8 -mt-4">Manifested into reality by Arnav</p>
+<div class="flex space-x-6 items-center">
+<a aria-label="GitHub" class="social-icon social-icon-github text-on-surface-variant opacity-70 hover:opacity-100 transition-all" href="https://github.com/desertalab"><img src="resources/git.svg" alt="GitHub" class="w-6 h-6"></a>
+<a aria-label="LinkedIn" class="social-icon text-on-surface-variant opacity-70 hover:opacity-100 transition-all" href="https://www.linkedin.com/in/bhajanlal-bishnoi-4950523ab/"><img src="resources/link.svg" alt="LinkedIn" class="w-6 h-6"></a>
+<a aria-label="Instagram" class="social-icon text-on-surface-variant opacity-70 hover:opacity-100 transition-all" href="https://www.instagram.com/desertalab"><img src="resources/insta.svg" alt="Instagram" class="w-6 h-6"></a>
 </div>
-<div class="col-span-6 md:col-span-4 lg:col-span-2">
-<h5 class="font-label-caps text-label-caps text-on-surface font-bold mb-6">LAB</h5>
+</div>
+<div class="col-span-6 md:col-span-2">
+<h5 class="font-label-caps text-label-caps text-on-surface mb-8" id="footer-research-heading">RESEARCH</h5>
 <ul class="space-y-4">
-
-
-
-
+<li class=""><a class="font-body-md text-body-md text-on-surface-variant hover:text-primary hover:underline underline-offset-4 transition-all" href="#">Decision Intelligence</a></li>
+<li class=""><a class="font-body-md text-body-md text-on-surface-variant hover:text-primary hover:underline underline-offset-4 transition-all" href="#">Journal</a></li>
 </ul>
 </div>
-<div class="col-span-6 md:col-span-4 lg:col-span-2">
-<h5 class="font-label-caps text-label-caps text-on-surface font-bold mb-6">COMPANY</h5>
+<div class="col-span-6 md:col-span-2">
+<h5 class="font-label-caps text-label-caps text-on-surface mb-8">PLATFORMS</h5>
 <ul class="space-y-4">
-<li class=""><a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary underline-offset-4 hover:underline" href="research.html">Company</a></li>
-<li class=""><a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary underline-offset-4 hover:underline" href="technology.html">Collaborate</a></li>
-<li class=""><a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary underline-offset-4 hover:underline" href="platform.html">Careers</a></li>
-<li class=""><a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary underline-offset-4 hover:underline" href="#">Contact</a></li>
+<li class=""><a class="font-body-md text-body-md text-on-surface-variant hover:text-primary hover:underline underline-offset-4 transition-all" href="platform.html">LAONI</a></li>
+<li class=""><a class="font-body-md text-body-md text-on-surface-variant hover:text-primary hover:underline underline-offset-4 transition-all" href="#">Founder's Match</a></li>
+<li class=""><a class="font-body-md text-body-md text-on-surface-variant hover:text-primary hover:underline underline-offset-4 transition-all" href="#">Infrastructure</a></li>
 </ul>
-</div><div class="col-span-6 md:col-span-4 lg:col-span-2" style="background-color: transparent;"><h5 class="font-label-caps text-label-caps text-on-surface font-bold mb-6">ECOSYSTEM</h5><ul class="space-y-4"><li class=""><a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary underline-offset-4 hover:underline" href="research.html">LAONI</a></li><li class=""><a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary underline-offset-4 hover:underline" href="#">Founder's Match</a></li><li class=""><a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary underline-offset-4 hover:underline" href="research.html">Research</a></li><li class=""><a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary underline-offset-4 hover:underline" href="technology.html">Technology</a></li><li class=""><a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary underline-offset-4 hover:underline" href="platform.html">Platforms</a></li><li class=""><a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary underline-offset-4 hover:underline" href="#">Journal</a></li></ul></div>
-<div class="col-span-12 md:col-span-4 lg:col-span-4" style="background-color: transparent;">
-<h5 class="font-label-caps text-label-caps text-on-surface font-bold mb-6">CONNECT</h5>
-<div class="flex flex-wrap gap-4">
-<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary underline-offset-4 hover:underline" href="#">GitHub</a>
-<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary underline-offset-4 hover:underline" href="#">LinkedIn</a>
-<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary underline-offset-4 hover:underline" href="#">YouTube</a>
-<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary underline-offset-4 hover:underline" href="#">X</a>
 </div>
-<div class="mt-12 p-8 hairline-border bg-background w-full">
-<p class="font-label-caps text-label-caps mb-4">NEWSLETTER</p>
-<div class="flex">
-<input class="bg-transparent border-b border-border-subtle py-2 w-full focus:outline-none focus:border-primary text-body-md transition-colors" placeholder="Email Address" type="email">
-<button class="ml-4 text-primary"><span class="material-symbols-outlined">arrow_forward</span></button>
+<div class="col-span-6 md:col-span-2">
+<h5 class="font-label-caps text-label-caps text-on-surface mb-8">COMPANY</h5>
+<ul class="space-y-4">
+<li class=""><a class="font-body-md text-body-md text-on-surface-variant hover:text-primary hover:underline underline-offset-4 transition-all" href="#">About</a></li>
+<li class=""><a class="font-body-md text-body-md text-on-surface-variant hover:text-primary hover:underline underline-offset-4 transition-all" href="#">Collaborate</a></li>
+<li class=""><a class="font-body-md text-body-md text-on-surface-variant hover:text-primary hover:underline underline-offset-4 transition-all" href="#">Careers</a></li>
+</ul>
 </div>
-</div>
+<div class="col-span-6 md:col-span-2">
+<h5 class="font-label-caps text-label-caps text-on-surface mb-8">LEGAL</h5>
+<ul class="space-y-4">
+<li class=""><a class="font-body-md text-body-md text-on-surface-variant hover:text-primary hover:underline underline-offset-4 transition-all" href="#">Privacy</a></li>
+<li class=""><a class="font-body-md text-body-md text-on-surface-variant hover:text-primary hover:underline underline-offset-4 transition-all" href="#">Terms</a></li>
+</ul>
 </div>
 </div>
 </footer>
@@ -394,13 +401,19 @@
         const gridItems = document.querySelectorAll('.grid > div');
         gridItems.forEach(item => {
             item.addEventListener('mouseenter', () => {
-                item.style.backgroundColor = 'rgba(230, 224, 255, 0.2)';
+                if (!item.closest('footer')) {
+                    item.style.backgroundColor = 'rgba(230, 224, 255, 0.2)';
+                }
             });
             item.addEventListener('mouseleave', () => {
-                item.style.backgroundColor = 'transparent';
+                if (!item.closest('footer')) {
+                    item.style.backgroundColor = 'transparent';
+                }
             });
         });
     </script>
 
+
+```
 
 </body></html>

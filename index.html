@@ -1,14 +1,14 @@
-<!DOCTYPE html>
+<!DOCTYPE html><html class="light" lang="en" style=""><head></head><body class="font-body-md overflow-x-hidden">```html
 
-<html class="light" lang="en" style=""><head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
 <title>Deserta Lab | Engineering-First Research</title>
 <!-- Google Fonts -->
-<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@400;500;600;700&amp;family=Hanken+Grotesk:wght@400;500;600&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@400;500;600;700&amp;family=Hanken+Grotesk:wght@400;500;600&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
 <!-- Material Symbols -->
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 <!-- Tailwind Configuration -->
 <script id="tailwind-config">
@@ -146,9 +146,19 @@
             from { opacity: 0; transform: translateY(20px); }
             to { opacity: 1; transform: translateY(0); }
         }
+
+        /* Consistent Social Icon Styling */
+        .social-icon-wrapper svg {
+            width: 24px;
+            height: 24px;
+            display: inline-block;
+            transition: all 0.2s ease;
+            filter: grayscale(1) opacity(0.7);
+        }
+        .social-icon-wrapper:hover svg {
+            filter: grayscale(0) opacity(1);
+        }
     </style>
-</head>
-<body class="font-body-md overflow-x-hidden">
 <!-- Top Navigation Bar -->
 <nav class="fixed top-0 left-0 w-full z-50 bg-background/95 backdrop-blur-sm thin-border-b h-20 flex items-center">
 <div class="flex justify-between items-center w-full px-margin-desktop max-w-container-max mx-auto">
@@ -342,18 +352,16 @@
 <a class="font-headline-md text-headline-md font-bold text-primary block mb-6" href="index.html">Deserta Lab</a>
 <p class="font-headline-md text-headline-md text-on-surface mb-8 leading-tight">Engineering-first research for meaningful impact.</p>
 <p class="font-body-md text-body-md text-on-surface-variant mb-8">© 2026 Deserta Lab. All rights reserved.</p><p class="font-body-md text-body-md text-on-surface-variant mb-8 -mt-4">Manifested into reality by Arnav</p>
-<div class="flex space-x-6">
-<a class="text-on-surface-variant hover:text-primary transition-all" href="#">GitHub</a>
-<a class="text-on-surface-variant hover:text-primary transition-all" href="#">LinkedIn</a>
-<a class="text-on-surface-variant hover:text-primary transition-all" href="#">X</a>
+<div class="flex space-x-6 items-center">
+<a aria-label="GitHub" class="social-icon-wrapper" href="https://github.com/desertalab"><img src="resources/git.svg" alt="GitHub" class="w-6 h-6"></a>
+<a aria-label="LinkedIn" class="social-icon-wrapper" href="https://www.linkedin.com/in/bhajanlal-bishnoi-4950523ab/"><img src="resources/link.svg" alt="LinkedIn" class="w-6 h-6"></a>
+<a aria-label="Instagram" class="social-icon-wrapper" href="https://www.instagram.com/desertalab"><img src="resources/insta.svg" alt="Instagram" class="w-6 h-6"></a>
 </div>
 </div>
 <div class="col-span-6 md:col-span-2">
 <h5 class="font-label-caps text-label-caps text-on-surface mb-8" id="footer-research-heading">RESEARCH</h5>
 <ul class="space-y-4">
-<li class=""><a class="font-body-md text-body-md text-on-surface-variant hover:text-primary hover:underline underline-offset-4 transition-all" href="#">AI Planning</a></li>
 <li class=""><a class="font-body-md text-body-md text-on-surface-variant hover:text-primary hover:underline underline-offset-4 transition-all" href="#">Decision Intelligence</a></li>
-<li class=""><a class="font-body-md text-body-md text-on-surface-variant hover:text-primary hover:underline underline-offset-4 transition-all" href="#">Knowledge Graphs</a></li>
 <li class=""><a class="font-body-md text-body-md text-on-surface-variant hover:text-primary hover:underline underline-offset-4 transition-all" href="#">Journal</a></li>
 </ul>
 </div>
@@ -400,4 +408,6 @@
             }
         });
     </script>
+```
+
 </body></html>
